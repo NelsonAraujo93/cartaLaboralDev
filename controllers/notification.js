@@ -262,7 +262,7 @@ var controller = {
                 if(!result){
                     return res.status(404).send({
                         status: 'error',
-                        message: 'El usuario no esta registrado'
+                        message: err
                     });
                 } else {
                     if(await bcrypt.compareSync(params.pass, result[0].pass)){
