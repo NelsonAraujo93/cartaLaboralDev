@@ -14,8 +14,8 @@ const adminRoutes = require('./routes/route');
 
 
 //middlewares algo que se ejecuta antes de las rutas o las url
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '100mb', extended: true}))
+app.use(bodyParser.urlencoded({limit: '100mb', extended: true}))
 //app.use(cookieparser());
 //CORS para permitir peticiones desde el front
 
@@ -33,11 +33,14 @@ app.use((req, res, next) => {
     next();
 });
 
+//prefijos a las rutas
 
-app.use('/', express.static('Api',{redirect:false}));
+//app.use('/', express.static('VagosApi',{redirect:false}));
 app.use('/metrolinea', adminRoutes);
 
-app.get('*', function(req,res,next){
-    res.sendFile(path.resolve('Api/index.html'));
-});
+/*app.get('*', function(req,res,next){
+    res.sendFile(path.resolve('VagosApi/index.html'));
+})*/
+//exportar el modulo (fichero actual)
+
 module.exports = app;

@@ -6,7 +6,7 @@ const dbConnection = require('./dbConecction');
 var bcrypt = require('bcryptjs');
 const { promisify } = require ('util');
 const path = require ('path');
-
+const mailer = require('../controllers/mailer');
 const jwt = require ('jsonwebtoken');
 //const configMensaje = require('../controllers/configMensajes');
 
@@ -262,7 +262,7 @@ var controller = {
                 if(!result){
                     return res.status(404).send({
                         status: 'error',
-                        message: err
+                        message: 'El usuario no esta registrado'
                     });
                 } else {
                     if(await bcrypt.compareSync(params.pass, result[0].pass)){
@@ -273,7 +273,6 @@ var controller = {
                         let token = jwt.sign({id}, process.env.JWT_SECRET,{
                             expiresIn:  process.env.JWT_EXPIRES_IN
                         });
-                        console.log(token.expiresIn)
                         var cookieOptions = {
                             expires: new Date(
                                 Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
@@ -358,6 +357,7 @@ var controller = {
                 state: params.state,
                 checked: params.checked,
                 admin_id: params.admin_id,
+                observations: params.observations
             };
             var update=[
                 form,
@@ -454,7 +454,7 @@ var controller = {
      */
     getFormById:  (req, res ) => {
         var params= req.params;
-        dbConnection.query('SELECT forms.request_type,forms.admin_id, forms.state, forms.checked, forms.id, forms.content,users.id as user_id,users.name,users.identification,users.telephone,users.email,stamps.id as stamp_id, stamps.stamp_url FROM `forms` INNER JOIN `users` ON forms.user_id=users.id INNER JOIN `stamps` ON forms.stamp_id=stamps.id where forms.id = ?', params.id ,(err, result) => {
+        dbConnection.query('SELECT forms.observations,forms.request_type,forms.admin_id, forms.state, forms.checked, forms.id, forms.content,users.id as user_id,users.name,users.identification,users.telephone,users.email,stamps.id as stamp_id, stamps.stamp_url FROM `forms` INNER JOIN `users` ON forms.user_id=users.id INNER JOIN `stamps` ON forms.stamp_id=stamps.id where forms.id = ?', params.id ,(err, result) => {
             if (err){
                 return res.status(404).send({
                     status: 'error',
@@ -557,6 +557,7 @@ var controller = {
     uploadStamp: (req, res) => {
         var file_name='pdf no cargada';
         var params= req.params;
+        console.log(req.files);
        if(!req.files){
         return res.status(404).send({
             status: 'error',
@@ -579,7 +580,7 @@ var controller = {
        }else{
             return res.status(200).send({
                 status: 'Ok',
-                message: 'Regla subida',
+                message: 'Estampilla subida',
                 data: file_name
             });
         }
@@ -592,6 +593,43 @@ var controller = {
     downloadStamp : (req , res) =>{
         var params = req.body;
         var url = params.stamp_url;
+        var path_file = './stamp/' + url;
+        fs.exists(path_file, (exists)=>{
+            if(exists){
+                return new Promise(function(resolve, reject) {
+                    try {
+                        var filestream = fs.createReadStream(path_file);
+                        res.contentType("application/pdf");
+
+                        // When the stream is done being read, end the response
+                        filestream.on('close', () => {
+                            res.end()
+                        })
+
+                        // Stream chunks to response
+                        filestream.pipe(res);
+                        //return request('http://localhost:4200').pipe(stream);
+                    } catch (e) {
+                        return reject(e);
+                    }
+                });
+            }else{
+                return res.status(404).send({
+                    status: 'error',
+                    message: "there's no pdf related" + exists
+                });
+            }
+        })
+    },
+    /**
+     * Funcion name:  prevStamp
+     * Funcionalidad: previsualiza un PDF desde la carpeta
+     * 
+     */
+     prevStamp : (req , res) =>{
+        var params = req.params;
+        var url = params.url;
+        console.log(url)
         var path_file = './stamp/' + url;
         fs.exists(path_file, (exists)=>{
             if(exists){
@@ -796,6 +834,15 @@ var controller = {
                 mesage: 'Formulario mal digilenciado'
             });
         };
+    },
+
+    formularioCorreo: (req, res) => {
+        mailer(req.body);
+        console.log(req);
+        return res.status(200).send({
+            status: 'Ok',
+            mesage: 'Mensaje enviado'
+        });
     },
 };
 module.exports = controller;
