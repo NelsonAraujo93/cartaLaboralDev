@@ -1,0 +1,138 @@
+.news-container {
+    height: 810px !important;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto !important;
+}
+.content-container-news{
+    height: 810px;
+    width: 750px;
+}
+.header-menu {
+    width: 750px;
+    height: 60px;
+    position: relative;
+}
+.btn-nav-news,
+.btn-nav-checked,
+.btn-nav-close {
+    width: 150px;
+    height: 40px;
+    float: left;
+    color: #CCCCCC;
+    
+    cursor:pointer;
+    transition: all 250ms ease-in-out;
+    position: absolute;
+/* sombra */
+    background: #025234;
+/* sombra */
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 20px 20px 0px 0px;
+    bottom: 0px;
+}
+.btn-nav-checked{
+    left: 200px;
+}
+.log-out{
+    right: 0;
+}
+.btn-nav-news:hover,
+.btn-nav-checked:hover {
+    background: #06915b;
+    color: white;
+    height: 50px;
+}
+.btn-nav-news.active,
+.btn-nav-checked.active {
+    background: #00925B;
+    height: 50px;
+    color: white;
+}
+
+.news-content {
+    width: 750px;
+    height:727px;
+    background: #FFFFFF;
+    position: relative;
+    border-radius: 0 8px 8px 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.1);
+}
+.content-news {
+    height: 96%;
+    width: 100%;
+    position: relative;
+    overflow-y: scroll;
+    box-sizing: border-box;
+}
+.content-news.active{
+    display:block
+}
+.content-news.inactive{
+    display:none
+}
+.formulario {
+    width: 100%;
+    /* max-width: 1300px; */
+    margin: 0 auto;
+    background: #f1f1f1;
+    height: 100%;
+    border-radius: 8px;
+    /* box-shadow: 5px 3px 6px 1px black; */
+    box-sizing: border-box;
+    padding: 5px 20px;
+}
+.toast-container {
+    position: absolute;
+    z-index: 3;
+    right: -256px;
+    bottom: 0;
+}
+.MuiBadge-root.aproved {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    right: 0px;
+    top: 50%;
+}
+.MuiBadge-root.unchecked {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    right: 0px;
+    top: 50%;
+}
+.MuiBadge-root.denied {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    right: 0px;
+    top: 50%;
+}
+.aproved .MuiBadge-badge.MuiBadge-anchorOriginTopRightRectangle {
+    background-color: #00925B;
+    color: #fff;
+}
+.MuiBadge-colorPrimary {
+    color: #fff !important;
+    background-color: #D7DF18 !important;
+}
+.MuiBadge-colorSecondary {
+    color: #fff;
+    background-color: #FF3636 !important;
+}
+.badge-container{
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+.badge-content {
+    width: 100px;
+    float: left;
+    height: 100%;
+    position: relative;
+    margin-right: 40px;
+}
+.badge-label{
+    transform: translate(0,-50%) !important;
+    left: 0;
+}

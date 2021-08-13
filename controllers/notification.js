@@ -1,4 +1,4 @@
-'use strict'
+-'use strict'
 
 var validator = require('validator');
 const fs = require('fs');
@@ -262,7 +262,7 @@ var controller = {
                 if(!result){
                     return res.status(404).send({
                         status: 'error',
-                        message: err
+                        message: 'El usuario no esta registrado'
                     });
                 } else {
                     if(await bcrypt.compareSync(params.pass, result[0].pass)){

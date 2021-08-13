@@ -1,0 +1,130 @@
+
+.draggable-modal{
+    position: absolute;
+    width: 426px;
+    height: 600px;
+    background: white;
+    box-shadow: 1px 3px 8px 1px #0000001f;
+    border-radius: 8px;
+    border: 1px solid #8080804a;
+    cursor: move;
+    z-index: 4;
+    pointer-events: all;
+}
+.content-createPDF .btn-add-contract {
+    width: 150px;
+    height: 30px;
+    background: rgb(61, 146, 139);
+    position: relative;
+    border-radius: 25px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    float: right;
+    z-index: 2;
+    transition: all 250ms ease-in-out;
+}
+.btn-label {
+    white-space: nowrap;
+}
+.draggable-window {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 4;
+    overflow: hidden;
+    pointer-events: none;
+    /* z-index: 0; */
+}
+.content-createPDF {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 20px;
+}
+.list-label {
+    font-weight: 600;
+}
+.list-container {
+    width: 100%;
+}
+.content-createPDF .list {
+    height: 130px;
+    width:300px;
+    overflow-y: auto;
+    position: relative;
+    background: #F1F1F1;
+    border-radius: 5px;
+    border: unset;
+}
+
+.item-list-added {
+    width: 100%;
+    position: relative;
+    height: 40px;
+    transition: all 250ms ease-in-out;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+.number-container {
+    width: 50%;
+    float: left;
+}
+.colum-container {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height:100%
+}
+.column-data .btn {
+    width: 20px !important;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    padding: 0 !important;
+}
+.btn-edit {
+    background: #0A9B91 !important;
+    color: white !important;
+}
+.btn-edit:hover{
+    background: #088f86 !important;
+}
+.btn-danger{
+    background:#FF3636;
+}
+.list-label {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+textarea#input-detail {
+    position: absolute;
+    top: 90px;
+    /* height: 200px; */
+    height: 150px;
+    left: 39px;
+    width: 422px;
+    resize: none;
+    border: unset;
+    font-size: 16px;
+    overflow-y: auto;
+    /* top: 128px; */
+    background: #F1F1F1;
+    border-radius: 5px;
+}
+.swal2-title{
+    height: 240px;
+}
+.swal2-actions {
+    height: 60px;
+}
