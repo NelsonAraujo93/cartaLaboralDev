@@ -31,7 +31,6 @@ router.get('/auth-user/', controller.auth);
 //router.get('/profile', controller.profile);
 //router.get('/load-game/:id', controller.loadGamesById);
 
-router.get('/prev-stamp/:url', controller.prevStamp);
 //metodos post enviar
 router.post('/create-user', controller.createUser);
 router.post('/create-form', controller.createForm);
@@ -45,7 +44,6 @@ router.post('/download-stamp', controller.downloadStamp);
 //router.post('/load-products-id', controller.loadProductById);
 //router.post('/formulario', controller.formularioCorreo);
 //router.post('/upload-image/:id?/:class?/:type?',md_uploadImage,controller.uploadImage);
-router.post('/mail', controller.formularioCorreo);
 
 //metodos put actualizar
 router.put('/update-form', controller.updateForm);

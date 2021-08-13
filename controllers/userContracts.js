@@ -71,7 +71,7 @@ var controllerDB2 = {
             });
         }
         if (validate_id) {
-            dbConnection2.query("SELECT job_title.name as 'job_name', contract_type.name as 'contract_name', payroll.* FROM `payroll` INNER JOIN `job_title` ON payroll.job_title=job_title.id  INNER JOIN `contract_type` ON payroll.contract_type=contract_type.id WHERE identification= ? ", params.id,  async (err, result) => {
+            dbConnection2.query("SELECT * FROM payroll WHERE identification = ?", params.id,  async (err, result) => {
                 if (result.length === 0) {
                     return res.status(404).send({
                         status: 'error',

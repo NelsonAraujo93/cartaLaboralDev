@@ -8,7 +8,8 @@ const connection2 = mysql.createConnection({
   host     : process.env.DATABASE_HOST,
   user     : process.env.DATABASE_USER,
   password : process.env.DATABASE_PASSWORD,
-  //port : 3306,
-  database : process.env.DATABASE_2
+  port : 3306,
+  database : process.env.DATABASE_2,
+  insecureAuth : true
 });
 module.exports = connection2;

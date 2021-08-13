@@ -1,28 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f939c6a.chunk.css",
-    "main.js": "/static/js/main.69793d35.chunk.js",
-    "main.js.map": "/static/js/main.69793d35.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.a389c5ca.js",
-    "runtime-main.js.map": "/static/js/runtime-main.a389c5ca.js.map",
+    "main.css": "/static/css/main.bf709adf.chunk.css",
+    "main.js": "/static/js/main.389c81b0.chunk.js",
+    "main.js.map": "/static/js/main.389c81b0.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.46e4c747.js",
+    "runtime-main.js.map": "/static/js/runtime-main.46e4c747.js.map",
     "static/css/2.bb25cdbb.chunk.css": "/static/css/2.bb25cdbb.chunk.css",
-    "static/js/2.b480e5ef.chunk.js": "/static/js/2.b480e5ef.chunk.js",
-    "static/js/2.b480e5ef.chunk.js.map": "/static/js/2.b480e5ef.chunk.js.map",
-    "static/js/3.7dea23c7.chunk.js": "/static/js/3.7dea23c7.chunk.js",
-    "static/js/3.7dea23c7.chunk.js.map": "/static/js/3.7dea23c7.chunk.js.map",
+    "static/js/2.5592b513.chunk.js": "/static/js/2.5592b513.chunk.js",
+    "static/js/2.5592b513.chunk.js.map": "/static/js/2.5592b513.chunk.js.map",
+    "static/js/3.08ad5d01.chunk.js": "/static/js/3.08ad5d01.chunk.js",
+    "static/js/3.08ad5d01.chunk.js.map": "/static/js/3.08ad5d01.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.bb25cdbb.chunk.css.map": "/static/css/2.bb25cdbb.chunk.css.map",
-    "static/css/main.4f939c6a.chunk.css.map": "/static/css/main.4f939c6a.chunk.css.map",
-    "static/js/2.b480e5ef.chunk.js.LICENSE.txt": "/static/js/2.b480e5ef.chunk.js.LICENSE.txt",
-    "static/media/Roboto-Bold.75371f53.ttf": "/static/media/Roboto-Bold.75371f53.ttf",
-    "static/media/Roboto-Regular.a8d6ac03.ttf": "/static/media/Roboto-Regular.a8d6ac03.ttf",
+    "static/css/main.bf709adf.chunk.css.map": "/static/css/main.bf709adf.chunk.css.map",
+    "static/js/2.5592b513.chunk.js.LICENSE.txt": "/static/js/2.5592b513.chunk.js.LICENSE.txt",
     "static/media/metrolinea-logo.16f6c7f8.png": "/static/media/metrolinea-logo.16f6c7f8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.a389c5ca.js",
+    "static/js/runtime-main.46e4c747.js",
     "static/css/2.bb25cdbb.chunk.css",
-    "static/js/2.b480e5ef.chunk.js",
-    "static/css/main.4f939c6a.chunk.css",
-    "static/js/main.69793d35.chunk.js"
+    "static/js/2.5592b513.chunk.js",
+    "static/css/main.bf709adf.chunk.css",
+    "static/js/main.389c81b0.chunk.js"
   ]
 }
