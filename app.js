@@ -33,14 +33,11 @@ app.use((req, res, next) => {
     next();
 });
 
-//prefijos a las rutas
 
-//app.use('/', express.static('VagosApi',{redirect:false}));
+app.use('/', express.static('Api',{redirect:false}));
 app.use('/metrolinea', adminRoutes);
 
-/*app.get('*', function(req,res,next){
-    res.sendFile(path.resolve('VagosApi/index.html'));
-})*/
-//exportar el modulo (fichero actual)
-
+app.get('*', function(req,res,next){
+    res.sendFile(path.resolve('Api/index.html'));
+});
 module.exports = app;

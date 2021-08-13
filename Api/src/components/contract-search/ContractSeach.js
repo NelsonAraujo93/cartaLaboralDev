@@ -210,6 +210,7 @@ class ContractSearch extends Component{
                                                 contractType='Ejecuta';
                                                 var newContratos=this.state.contratos;
                                                 newContratos.map((response,i)=>{
+                                                    debugger
                                                     if(response.id===this.state.selectedContracts.id){
                                                         newContratos.splice(i,1);
                                                         this.setState({

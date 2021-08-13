@@ -354,6 +354,7 @@ class NewDetails extends Component{
         });
         var blobPdf;
         if(data===1){
+            debugger
             var user=this.userData.current.state.payroll;
             var today=new Date();
             this.date=new Date(user.admission_date);
@@ -480,6 +481,7 @@ class NewDetails extends Component{
                 
             });
         }else if(data===0){
+            debugger
             var user=this.contractorRef.current.contractorData;
             this.setState({previewPDF:true},()=>{
                 const Carta = () => (
