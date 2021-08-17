@@ -327,7 +327,7 @@ var controllerDB2 = {
                 }else{
                     return res.status(200).send({
                         status: 'Ok',
-                        message: 'contractor creado',
+                        message: 'contrato creado',
                         data: result
                     });
                 }
@@ -348,18 +348,8 @@ var controllerDB2 = {
         var params = req.body;
         try {
             var validate_identification = !validator.isEmpty(toString(params.identification));
-            var validate_document_type = !validator.isEmpty(toString(params.document_type));
             var validate_name = !validator.isEmpty(params.name);
-            var validate_first_surname = !validator.isEmpty(params.first_surname);
-            var validate_second_surname = !validator.isEmpty(params.second_surname);
-            var validate_expedition_place = !validator.isEmpty(params.expedition_place);
             var validate_state = !validator.isEmpty(params.state);
-            var validate_admission_date = !validator.isEmpty(params.admission_date);
-            var validate_retirement_date = !validator.isEmpty(params.retirement_date);
-            var validate_contract_type = !validator.isEmpty(params.contract_type);
-            var validate_job_title = !validator.isEmpty(toString(params.job_title));
-            var validate_salary = !validator.isEmpty(toString(params.salary));
-            var validate_dependency = !validator.isEmpty(toString(params.dependency));
         } catch (err) {
             return res.status(404).send({
                 status: 'error',
@@ -367,7 +357,7 @@ var controllerDB2 = {
             });
         }
 
-        if (validate_year && validate_contractNumber  && validate_contractor) {
+        if (validate_identification && validate_name  && validate_state) {
 
             //crear objeto
             var payroll ={
@@ -394,7 +384,7 @@ var controllerDB2 = {
                 }else{
                     return res.status(200).send({
                         status: 'Ok',
-                        message: 'contractor creado',
+                        message: 'Nomina creado',
                         data: result
                     });
                 }
