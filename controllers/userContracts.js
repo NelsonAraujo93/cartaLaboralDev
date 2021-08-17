@@ -136,7 +136,6 @@ var controllerDB2 = {
      */
     getContractsByContractorId:  async (req, res) => {
         var params = req.params;
-        console.log(params);
         try {
             var validate_id = !validator.isEmpty(toString(params.id));
         } catch (err) {
@@ -153,7 +152,6 @@ var controllerDB2 = {
                         message: 'El contratista no tiene contratos encontrados' + err
                     });
                 } else {
-                    console.log(result)
                     return res.status(200).send({
                         status: 'Ok',
                         data: result
