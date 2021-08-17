@@ -43,7 +43,7 @@ router.post('/login', controller.login);
 router.post('/download-stamp', controller.downloadStamp);
 router.post('/mail', controller.formularioCorreo);
 
-router.post('/creat-payroll', controllerDB2.createPayroll);
+router.post('/create-payroll', controllerDB2.createPayroll);
 
 router.post('/create-contractor', controllerDB2.createContractor);
 
