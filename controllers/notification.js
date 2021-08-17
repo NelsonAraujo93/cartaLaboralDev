@@ -564,6 +564,7 @@ var controller = {
         });
        }
        var file_path = req.files.file.path;
+       console.log(req.files)
        //en servidor
        var file_name = file_path.split('/')[2];
        var file_ext = file_name.split('.')[1];
