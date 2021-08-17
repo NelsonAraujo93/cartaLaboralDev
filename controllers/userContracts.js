@@ -292,17 +292,7 @@ var controllerDB2 = {
         try {
             var validate_year = !validator.isEmpty(toString(params.year));
             var validate_contractNumber = !validator.isEmpty(toString(params.contract_number));
-            var validate_date = !validator.isEmpty(params.date);
-            var validate_object = !validator.isEmpty(params.object);
-            var validate_execution_time = !validator.isEmpty(params.execution_time);
-            var validate_value = !validator.isEmpty(params.value);
-            var validate_value_string = !validator.isEmpty(params.value_string);
-            var validate_initial_date = !validator.isEmpty(params.initial_date);
-            var validate_finish_date = !validator.isEmpty(params.finish_date);
-            var validate_state = !validator.isEmpty(params.state);
             var validate_contractor = !validator.isEmpty(toString(params.contractor));
-            var validate_contractor_type = !validator.isEmpty(toString(params.contractor_type));
-            var validate_supervisor = !validator.isEmpty(toString(params.supervisor));
         } catch (err) {
             return res.status(404).send({
                 status: 'error',
