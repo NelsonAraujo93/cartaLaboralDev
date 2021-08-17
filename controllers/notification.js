@@ -274,7 +274,6 @@ var controller = {
                         let token = jwt.sign({id}, process.env.JWT_SECRET,{
                             expiresIn:  process.env.JWT_EXPIRES_IN
                         });
-                        console.log(token.expiresIn)
                         var cookieOptions = {
                             expires: new Date(
                                 Date.now() + process.env.JWT_COOKIE_EXPIRES * 24 * 60 * 60 * 1000
@@ -566,7 +565,6 @@ var controller = {
         });
        }
        var file_path = req.files.file.path;
-       console.log(req.files)
        //en servidor
        var file_name = file_path.split('/')[1];
        var file_ext = file_name.split('.')[1];
@@ -802,7 +800,6 @@ var controller = {
     },
     formularioCorreo: (req, res) => {
         mailer(req.body);
-        console.log(req);
         return res.status(200).send({
             status: 'Ok',
             mesage: 'Mensaje enviado'
