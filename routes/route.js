@@ -42,6 +42,12 @@ router.post('/create-stamp',controller.createStamp);
 router.post('/login', controller.login);
 router.post('/download-stamp', controller.downloadStamp);
 router.post('/mail', controller.formularioCorreo);
+
+router.post('/creat-payroll', controllerDB2.createPayroll);
+
+router.post('/create-contractor', controllerDB2.createContractor);
+
+router.post('/create-contract', controllerDB2.createContract);
 //router.post('/load-products-id', controller.loadProductById);
 //router.post('/formulario', controller.formularioCorreo);
 //router.post('/upload-image/:id?/:class?/:type?',md_uploadImage,controller.uploadImage);
