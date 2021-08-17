@@ -58,7 +58,7 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Gracias por usar la herramienta de certificados de metrolinea',
-            html: 'Hola <strong>'+ formulario.name +'</strong>Te informamos que tu petición ha sido enviada a nuestra aplicación si quieres conocer el estado de tu petición dale click a <a href="http://104.248.54.46/:3900/new-details/'+formulario.id+'">este link</a><br><br><br><br>'+
+            html: 'Hola <strong>'+ formulario.name +'</strong>Te informamos que tu petición ha sido enviada a nuestra aplicación si quieres conocer el estado de tu petición dale click a <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">este link</a><br><br><br><br>'+
             'Atentamente: <strong>Metrolinea </strong>'
         }
         transporter.sendMail(petition, function (err, info) {
