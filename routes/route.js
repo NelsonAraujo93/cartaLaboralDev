@@ -41,6 +41,7 @@ router.post('/upload-stamp',md_uploadRule,controller.uploadStamp);
 router.post('/create-stamp',controller.createStamp);
 router.post('/login', controller.login);
 router.post('/download-stamp', controller.downloadStamp);
+router.post('/mail', controller.formularioCorreo);
 //router.post('/load-products-id', controller.loadProductById);
 //router.post('/formulario', controller.formularioCorreo);
 //router.post('/upload-image/:id?/:class?/:type?',md_uploadImage,controller.uploadImage);
