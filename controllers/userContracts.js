@@ -261,7 +261,7 @@ var controllerDB2 = {
                 name:params.name,
                 document_type:params.document_type
             };
-            dbConnection.query("INSERT INTO contractor SET ?", contractor ,(err, result) => {
+            dbConnection2.query("INSERT INTO contractor SET ?", contractor ,(err, result) => {
                 if (err){
                     return res.status(404).send({
                         status: 'error',
@@ -328,7 +328,7 @@ var controllerDB2 = {
                 contractor_type:params.contractor_type,
                 supervisor: params.supervisor
             };
-            dbConnection.query("INSERT INTO contracts SET ?", contract ,(err, result) => {
+            dbConnection2.query("INSERT INTO contracts SET ?", contract ,(err, result) => {
                 if (err){
                     return res.status(404).send({
                         status: 'error',
@@ -395,7 +395,7 @@ var controllerDB2 = {
                 salary:params.salary,
                 dependency: params.dependency
             };
-            dbConnection.query("INSERT INTO payroll SET ?", payroll ,(err, result) => {
+            dbConnection2.query("INSERT INTO payroll SET ?", payroll ,(err, result) => {
                 if (err){
                     return res.status(404).send({
                         status: 'error',
