@@ -248,7 +248,7 @@ var controllerDB2 = {
         } catch (err) {
             return res.status(404).send({
                 status: 'error',
-                message: 'datos imcompletos'
+                message: err
             });
         }
 
