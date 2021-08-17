@@ -241,6 +241,7 @@ var controllerDB2 = {
      */
      createContractor:  (req, res ) => {
         var params = req.body;
+        console.log(params)
         try {
             var validate_identification = !validator.isEmpty(toString(params.identification));
             var validate_name = !validator.isEmpty(params.name);
