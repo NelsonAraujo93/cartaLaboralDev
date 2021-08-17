@@ -3,6 +3,7 @@
 const nodemailer = require('nodemailer');
 //var smtpTransport = require('nodemailer-smtp-transport');
 module.exports = (formulario) => {
+    console.log(formulario)
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         port:465,
