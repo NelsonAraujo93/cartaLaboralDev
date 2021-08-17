@@ -216,7 +216,8 @@ var controller = {
                 stamp_id: params.stamp_id,
                 user_id:params.user_id,
                 content:params.content,
-                request_type:params.request_type
+                request_type:params.request_type,
+                checked:0
             };
             dbConnection.query("INSERT INTO forms SET ?", form ,(err, result) => {
                 if (err){
