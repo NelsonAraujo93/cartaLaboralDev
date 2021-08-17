@@ -565,10 +565,10 @@ var controller = {
        }
        var file_path = req.files.file.path;
        //en servidor
-       // var file_name = file_path.split('/')[2];
-       // var file_ext = file_name.split('.')[1];
-       var file_name = file_path.split('\\')[1];
-       var file_ext = file_name.split('\.')[1];
+       var file_name = file_path.split('/')[2];
+       var file_ext = file_name.split('.')[1];
+       //var file_name = file_path.split('\\')[1];
+       //var file_ext = file_name.split('\.')[1];
        if(file_ext !='pdf'){
         fs.unlink(file_path,(err)=>{
             return res.status(200).send({
