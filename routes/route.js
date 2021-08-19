@@ -28,6 +28,7 @@ router.get('/get-contractor/:id', controllerDB2.getContractorId);
 
 router.get('/get-contracts/:id', controllerDB2.getContractsByContractorId);
 router.get('/auth-user/', controller.auth);
+router.get('/blob-form/:id', controller.getBlobPDF);
 //router.get('/profile', controller.profile);
 //router.get('/load-game/:id', controller.loadGamesById);
 
@@ -41,6 +42,7 @@ router.post('/upload-stamp',md_uploadRule,controller.uploadStamp);
 router.post('/create-stamp',controller.createStamp);
 router.post('/login', controller.login);
 router.post('/download-stamp', controller.downloadStamp);
+router.post('/download-prev-stamp', controller.downloadPrevStamp);
 router.post('/mail', controller.formularioCorreo);
 
 router.post('/create-payroll', controllerDB2.createPayroll);
@@ -48,12 +50,14 @@ router.post('/create-payroll', controllerDB2.createPayroll);
 router.post('/create-contractor', controllerDB2.createContractor);
 
 router.post('/create-contract', controllerDB2.createContract);
+router.post('/create-pdf', controller.createPDF);
 //router.post('/load-products-id', controller.loadProductById);
 //router.post('/formulario', controller.formularioCorreo);
 //router.post('/upload-image/:id?/:class?/:type?',md_uploadImage,controller.uploadImage);
 
 //metodos put actualizar
 router.put('/update-form', controller.updateForm);
+router.put('/add-stamp', controller.addStamp);
 
 //metodos delete borrar
 //router.post('/delete-game', controller.deleteGame);
