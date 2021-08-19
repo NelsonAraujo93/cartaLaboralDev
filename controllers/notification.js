@@ -8,10 +8,6 @@ const { promisify } = require ('util');
 const path = require ('path');
 const mailer = require('../controllers/mailer');
 const jwt = require ('jsonwebtoken');
-const fetch = require('node-fetch');
-//const Blob = require('fetch-blob');
-const pdf = require('html-pdf');
-const pdfTemplate = require('../create-pdfs');
 //const configMensaje = require('../controllers/configMensajes');
 
 //const tournamentMensaje = require('./tournamentMensaje');
@@ -389,87 +385,6 @@ var controller = {
         }
 
     },
-
-    createPDF:(req,res)=>{
-        //idDel FOrm
-        //PDFINFO
-        //pdfName
-        pdf.create(pdfTemplate(req.body),
-            {
-                "header": {
-                    "height": "45mm",
-                },
-                "footer": {
-                    "height": "28mm"
-            }}).toFile('./stamp/'+req.body.pdfName,(err)=>{
-            if(err){
-                return Promise.reject();
-            }else{
-                return res.status(200).send({
-                    status: 'Ok',
-                    message: 'Formilarios cargados'
-                });
-            }
-
-        })
-    },
-    /*getPdf:(req,res)=>{
-        pdf.create(pdfTemplate(req.data),{}).toFile('result.pdf',(err)=>{
-            if(err){
-                return Promise.reject();
-            }
-            return Promise.resolve();
-        })
-    },*/
-    /**
-     * Funcion name:  updateBlob
-     * Funcionalidad: Guarda un admin en la base de datos
-     * 
-     */
-     addStamp: (req, res) => {
-        var params = req.body;
-        try {
-            var validate_id = !validator.isEmpty(toString(params.id));
-            var validate_pdf_string = !validator.isEmpty(toString(params.pdf_string));
-        } catch (err) {
-            return res.status(404).send({
-                status: 'error',
-                message: 'datos imcompletos'
-            });
-        }
-
-        if (validate_id && validate_pdf_string ) {
-
-            //crear objeto
-            var form ={
-                pdf_string:params.pdf_string
-            };
-            var update=[
-                form,
-                params.id
-            ]
-            dbConnection.query("UPDATE forms SET  ? where id = ?", update ,(err, result) => {
-                if (err){
-                    return res.status(404).send({
-                        status: 'error',
-                        message: 'on edit Form' + err
-                    });
-                }else{
-                    return res.status(200).send({
-                        status: 'Ok',
-                        message: 'Form editado'
-                    });
-                }
-            });
-        } else {
-            return res.status(404).send({
-                status: 'error',
-                mesage: 'datos imcompletos' + 'sec'
-            });
-        }
-
-    },
-    
       /**
      * Funcion name:  getForms
      * Funcionalidad:  Carga los formularios en base de datos
@@ -540,7 +455,7 @@ var controller = {
      */
     getFormById:  (req, res ) => {
         var params= req.params;
-        dbConnection.query('SELECT forms.pdf_string, forms.observations,forms.request_type,forms.admin_id, forms.state, forms.checked, forms.id, forms.content,users.id as user_id,users.name,users.identification,users.telephone,users.email,stamps.id as stamp_id, stamps.stamp_url FROM `forms` INNER JOIN `users` ON forms.user_id=users.id INNER JOIN `stamps` ON forms.stamp_id=stamps.id where forms.id = ?', params.id ,(err, result) => {
+        dbConnection.query('SELECT forms.observations,forms.request_type,forms.admin_id, forms.state, forms.checked, forms.id, forms.content,users.id as user_id,users.name,users.identification,users.telephone,users.email,stamps.id as stamp_id, stamps.stamp_url FROM `forms` INNER JOIN `users` ON forms.user_id=users.id INNER JOIN `stamps` ON forms.stamp_id=stamps.id where forms.id = ?', params.id ,(err, result) => {
             if (err){
                 return res.status(404).send({
                     status: 'error',
@@ -635,64 +550,6 @@ var controller = {
             });
         };
     },
-     /**
-     * Funcion name:  getBlobPDF
-     * Funcionalidad: devuelve la información de un estampilla
-     * 
-     */
-      getBlobPDF:  async (req, res) => {
-        var params = req.params;
-        try {
-            var validate_id = !validator.isEmpty(toString(params.id));
-        } catch (err) {
-            return res.status(404).send({
-                status: 'error',
-                message: 'datos imcompletos' + err
-            });
-        }
-        if (validate_id) {
-            dbConnection.query("SELECT blob_pdf FROM forms WHERE id = ?", params.id,  async (err, result) => {
-                if (err) {
-                    return res.status(404).send({
-                        status: 'error',
-                        message: 'No se ha encontrado la estampilla' + err
-                    });
-                } else {
-                    try {
-                        
-                        fetch(url, options)
-                            .then(res => res.buffer())
-                            .then(data => {
-                                var filestream= fs.createWriteStream(objectId + '.pdf').write(data);
-                                res.contentType("application/pdf");
-
-                            // When the stream is done being read, end the response
-                                filestream.on('close', () => {
-                                    res.end()
-                                })
-
-                                // Stream chunks to response
-                                filestream.pipe(res);
-
-                            })
-                            .catch(e => {
-                                console.log(e);
-                            });
-                        //return request('http://localhost:4200').pipe(stream);
-                    } catch (e) {
-                        return reject(e);
-                    }
-                   
-                   
-                }
-            });
-        }else {
-            return res.status(404).send({
-                status: 'error',
-                mesage: 'Formulario mal digilenciado'
-            });
-        };
-    },
     /**
      * Funcion name:  uploadStamp
      * Funcionalidad: sube una reglaPDF a la carpeta
@@ -709,10 +566,10 @@ var controller = {
        }
        var file_path = req.files.file.path;
        //en servidor
-       //var file_name = file_path.split('/')[1];
-       //var file_ext = file_name.split('.')[1];
-       var file_name = file_path.split('\\')[1];
-       var file_ext = file_name.split('\.')[1];
+       var file_name = file_path.split('/')[1];
+       var file_ext = file_name.split('.')[1];
+       //var file_name = file_path.split('\\')[1];
+       //var file_ext = file_name.split('\.')[1];
        if(file_ext !='pdf'){
         fs.unlink(file_path,(err)=>{
             return res.status(200).send({
@@ -736,43 +593,6 @@ var controller = {
     downloadStamp : (req , res) =>{
         var params = req.body;
         var url = params.stamp_url;
-        var path_file = './stamp/' + url;
-        fs.exists(path_file, (exists)=>{
-            if(exists){
-                return new Promise(function(resolve, reject) {
-                    try {
-                        var filestream = fs.createReadStream(path_file);
-                        res.contentType("application/pdf");
-
-                        // When the stream is done being read, end the response
-                        filestream.on('close', () => {
-                            res.end()
-                        })
-
-                        // Stream chunks to response
-                        filestream.pipe(res);
-                        //return request('http://localhost:4200').pipe(stream);
-                    } catch (e) {
-                        return reject(e);
-                    }
-                });
-            }else{
-                return res.status(404).send({
-                    status: 'error',
-                    message: "there's no pdf related" + exists
-                });
-            }
-        })
-    },
-     /**
-     * Funcion name:  downloadPrevStamp
-     * Funcionalidad: descarga un PDF desde la carpeta
-     * 
-     */
-      downloadPrevStamp : (req , res) =>{
-        var params = req.body;
-        var url = params.pdf_string;
-        console.log(req.body)
         var path_file = './stamp/' + url;
         fs.exists(path_file, (exists)=>{
             if(exists){

@@ -17,7 +17,6 @@ module.exports = (formulario) => {
         }
     });
     if(formulario.mailState===1){
-        console.log(formulario);
         const certificar = {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
@@ -25,8 +24,8 @@ module.exports = (formulario) => {
             html: 'Gracias por usar la herramienta con nosotros <strong>'+ formulario.name +'</strong> Te informamos que tu petición ha sido certificada descargala adjunta a este correo <br><br><br><br>'+
             'Atentamente: <strong> Metrolinea </strong>',
             attachments: [{
-                filename: formulario.data,
-                path:  './stamp/' + formulario.data,
+                filename: 'mail.pdf',
+                content: formulario.data,
                 contentType: 'application/pdf',
               }],
         };
