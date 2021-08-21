@@ -12,7 +12,7 @@ module.exports = (formulario) => {
             user: 'estudiovagos@gmail.com', // Cambialo por tu email
             pass: 'vagosstudios2021', // Cambialo por tu password
             clientId:'225067350835-aoj3jqm885u7q1bsl7fuv33qnjaur25d.apps.googleusercontent.com',
-            clientSecret: '9nFwFKRE4GS1h5r0CgtVbTa-',
+            clientSecret: 'yqouiu71X3aQbwHALlYMfVAe',
             refreshToken: '1//04ZEwr7vpQ-5oCgYIARAAGAQSNwF-L9IrputExzRJ-ZLIoQCCsUfRW6wXdSrpvxoMdv9TIK0efhC1Oc6sOwZNg-ulbaw5ooH-qYY',
         }
     });
