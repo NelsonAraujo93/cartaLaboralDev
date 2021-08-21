@@ -13,7 +13,7 @@ module.exports = (formulario) => {
             pass: 'vagosstudios2021', // Cambialo por tu password
             clientId:'225067350835-aoj3jqm885u7q1bsl7fuv33qnjaur25d.apps.googleusercontent.com',
             clientSecret: 'yqouiu71X3aQbwHALlYMfVAe',
-            refreshToken: '1//04ZEwr7vpQ-5oCgYIARAAGAQSNwF-L9IrputExzRJ-ZLIoQCCsUfRW6wXdSrpvxoMdv9TIK0efhC1Oc6sOwZNg-ulbaw5ooH-qYY',
+            refreshToken: '1//04DcZN964-cPGCgYIARAAGAQSNwF-L9IrMYXt9tOx04_tr9mNWsssIEVGL1h5NfbUKhsgnNf49CySdu35X5JQlAaUfBT6rsv2RbU',
         }
     });
     if(formulario.mailState===1){
