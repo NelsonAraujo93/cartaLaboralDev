@@ -11,7 +11,7 @@ module.exports =(data) =>{
         width: 200px;
         height: 250px;
         opacity:1;
-        background: url(http://104.248.54.46:3900/static/media/logo-blanco.jpg);
+        background: url(https://upload.wikimedia.org/wikipedia/commons/8/8c/Metrol%C3%ADnea_logo.svg);
     }
     html {
         height: 100%;
@@ -208,7 +208,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image"  src="logo-blanco.jpg">
+                            <img class="image">
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
@@ -468,7 +468,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image"  src="logo-blanco.jpg" >
+                            <img class="image">
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
