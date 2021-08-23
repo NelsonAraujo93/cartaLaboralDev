@@ -467,21 +467,22 @@ module.exports =(data) =>{
               <title>PDF Certificado Metrolinea</title>
               <style>
               
-              .image-container{
-                height: 80px;
-                width: 250px;
-                position: relative;
-                background:red;
-                overflow:hidden;
-            }
-            .image {
-                width: 100%;
-                max-width: 250px;
-                height: 270px;
-                top:-90px;
-                background-size: contain;
-                position:absolute;
-            }
+                .image-container{
+                    height: 80px;
+                    width: 250px;
+                    position: relative;
+                    background:red;
+                    overflow:hidden;
+                }
+                .image {
+                    width: 100%;
+                    max-width: 250px;
+                    height: 270px;
+                    top:0px;
+                    left:0px;
+                    background-size: contain;
+                    position:absolute;
+                }
                 html {
                     height: 100%;
                     width: 100%;
