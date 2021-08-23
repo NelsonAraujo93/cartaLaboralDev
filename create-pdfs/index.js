@@ -23,7 +23,7 @@ module.exports =(data) =>{
 
         return `
         <!doctype html>
-        <html style="zoom: 0.55;">
+        <html style="zoom: 0.35;">
            <head>
               <meta charset="utf-8">
               <title>PDF Certificado Metrolinea</title>
