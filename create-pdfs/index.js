@@ -14,8 +14,8 @@ module.exports =(data) =>{
         max-width: 150px;
         height: 250px;
         top:-80px; 
-        background-image: url('http://104.248.54.46:3900/static/media/logo-blanco.jpg');
         background-size: contain;
+        background: white;
         position:absolute;
     }
     html {
