@@ -1,5 +1,185 @@
 module.exports =(data) =>{
     var user=data.pdfInfo.user;
+    var style= `<style>
+              
+    .image-container{
+        height: 70px;
+        width: 150px;
+        position: relative;
+        background:red;
+        overflow:hidden;
+    }
+    .image {
+        width: 100%;
+        max-width: 150px;
+        height: 250px;
+        top:-80px; 
+        background-image: url('http://104.248.54.46:3900/static/media/logo-blanco.jpg');
+        background-size: contain;
+        position:absolute;
+    }
+    html {
+        height: 100%;
+        width: 100%;
+    }
+    body {
+        padding:20px 50px 100px 50px;
+        width:100%;
+        height: 100%;
+        position:relative;
+        box-sizing: border-box;           
+        margin: 0;
+    }
+    .header{
+        height: 120px;
+        border-bottom: 2px solid yellow;
+        width: calc(100% - 50px);
+        position:absolute;
+        top:80px;
+        left:25px;
+    }
+    .body{
+        height:auto;
+        width:100%;
+        padding: 30px 50px;
+        box-sizing: border-box;
+    }
+    .footer {
+        height: 100%;
+        width: calc(100% - 50px);
+        position: absolute;
+        bottom: 110px;
+        left: 25px;
+    }
+    
+    .section {
+        margin: 10;
+        padding: 10;
+        flex-grow: 1
+    }
+    .metrolineaImage{
+        width:120px;
+        height:100px;
+        background-size:100%
+    }
+    .footerContent{
+        position:absolute;
+        height:60px;
+        width:100%;
+        bottom:0;
+        left:0;
+        border-top: 1px solid yellow;
+        padding-top:10px
+    }
+    .left{
+        margin: 10px;
+        padding: 10px;
+        width:50%;
+        height:100%;
+        float:left;
+    }
+    .rigth{
+        margin: 10px;
+        padding: 10px;
+        width:40%;
+        height:100%;
+        float:left;                
+        position: relative;
+    }
+    .text2{
+        font-size:20px;
+        font-family:'Roboto-Bold'
+    }
+    .fo {
+        text-align: right;
+        font-size: 22px;
+        width: 200px;
+        height: 20px;
+        font-weight: bold;
+        right: 50px;
+        top: 30px;
+        position: absolute;
+    }
+    .text1 {
+        font-size: 14px;
+    }
+ 
+    .title{
+        text-align:center;
+        padding:10px 0;
+        text-transform:uppercase;
+        font-weight:bold;
+        font-size:30px
+
+    }
+    .justifyP{
+        text-align:justify;
+        font-size:28px;
+        margin-bottom:10px
+    }
+    .boldP{
+        display:inline-block;
+        font-family:'Roboto';
+        font-weight:bold;
+        font-size:28px;
+        float:left;
+        text-align:justify
+    }
+    .flexRow{
+        width:100%;
+        font-size:22px;
+        height:28px;
+        margin-bottom:15px;
+        margin-top: 5px
+    }
+    .col1{
+        width: 46%;
+        font-size:28px;
+        font-family:'Roboto-Bold';
+        float:left;
+    }
+    .col2{
+        width: 50%;
+        font-size:28px;
+        text-align:justify;
+        float:left;
+    }
+    .fullWidthText{
+        margin-bottom:30px;
+        margin-top: 30px;
+        width:100%;
+        text-align:justify;
+        padding: 0 30px;
+        box-sizing: border-box
+    }
+    .contractTitle{
+        margin-top: 10px;
+    }
+    .footerText{
+        text-align:center;
+        font-size:16px;
+    }
+    .footerTextContainer{
+        height: 16px;
+        flex-grow: 1;
+        position:relative
+    }
+    a.footerText {
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 50%;
+    }
+    .contractData{
+        margin-bottom:'10px'
+    }
+    .boldC{
+        display:inline-block;
+        font-size: 28px;
+        text-align:justify;
+        font-weight:bold
+    }
+  </style>`;
     var observations=`<div class="fullWidthText">
                         <div class="boldC">
                             Observaciones:
@@ -27,191 +207,13 @@ module.exports =(data) =>{
            <head>
               <meta charset="utf-8">
               <title>PDF Certificado Metrolinea</title>
-              <style>
-              
-                .image-container{
-                    height: 70px;
-                    width: 150px;
-                    position: relative;
-                    background:red;
-                    overflow:hidden;
-                }
-                .image {
-                    width: 100%;
-                    max-width: 150px;
-                    height: 250px;
-                    top:-80px;
-                    background-size: contain;
-                    position:absolute;
-                }
-                html {
-                    height: 100%;
-                    width: 100%;
-                }
-                body {
-                    padding:20px 50px 100px 50px;
-                    width:100%;
-                    height: 100%;
-                    position:relative;
-                    box-sizing: border-box;           
-                    margin: 0;
-                }
-                .header{
-                    height: 120px;
-                    border-bottom: 2px solid yellow;
-                    width: calc(100% - 50px);
-                    position:absolute;
-                    top:80px;
-                    left:25px;
-                }
-                .body{
-                    height:auto;
-                    width:100%;
-                    padding: 30px 50px;
-                    box-sizing: border-box;
-                }
-                .footer {
-                    height: 100%;
-                    width: calc(100% - 50px);
-                    position: absolute;
-                    bottom: 110px;
-                    left: 25px;
-                }
-                
-                .section {
-                    margin: 10;
-                    padding: 10;
-                    flex-grow: 1
-                }
-                .metrolineaImage{
-                    width:120px;
-                    height:100px;
-                    background-size:100%
-                }
-                .footerContent{
-                    position:absolute;
-                    height:60px;
-                    width:100%;
-                    bottom:0;
-                    left:0;
-                    border-top: 1px solid yellow;
-                    padding-top:10px
-                }
-                .left{
-                    margin: 10px;
-                    padding: 10px;
-                    width:50%;
-                    height:100%;
-                    float:left;
-                }
-                .rigth{
-                    margin: 10px;
-                    padding: 10px;
-                    width:40%;
-                    height:100%;
-                    float:left;                
-                    position: relative;
-                }
-                .text2{
-                    font-size:20px;
-                    font-family:'Roboto-Bold'
-                }
-                .fo {
-                    text-align: right;
-                    font-size: 22px;
-                    width: 200px;
-                    height: 20px;
-                    font-weight: bold;
-                    right: 50px;
-                    top: 30px;
-                    position: absolute;
-                }
-                .text1 {
-                    font-size: 14px;
-                }
-             
-                .title{
-                    text-align:center;
-                    padding:10px 0;
-                    text-transform:uppercase;
-                    font-weight:bold;
-                    font-size:30px
-
-                }
-                .justifyP{
-                    text-align:justify;
-                    font-size:28px;
-                    margin-bottom:10px
-                }
-                .boldP{
-                    display:inline-block;
-                    font-family:'Roboto';
-                    font-weight:bold;
-                    font-size:28px;
-                    float:left;
-                    text-align:justify
-                }
-                .flexRow{
-                    width:100%;
-                    font-size:22px;
-                    height:28px;
-                    margin-bottom:15px;
-                    margin-top: 5px
-                }
-                .col1{
-                    width: 46%;
-                    font-size:28px;
-                    font-family:'Roboto-Bold';
-                    float:left;
-                }
-                .col2{
-                    width: 50%;
-                    font-size:28px;
-                    text-align:justify;
-                    float:left;
-                }
-                .fullWidthText{
-                    margin-bottom:30px;
-                    margin-top: 30px;
-                    width:100%;
-                    text-align:justify;
-                    padding: 0 30px;
-                    box-sizing: border-box
-                }
-                .contractTitle{
-                    margin-top: 10px;
-                }
-                .footerText{
-                    text-align:center;
-                    font-size:16px;
-                }
-                .footerTextContainer{
-                    height: 16px;
-                    flex-grow: 1;
-                    position:relative
-                }
-                a.footerText {
-                    position: absolute;
-                    transform: translate(-50%,-50%);
-                    left: 50%;
-                    top: 50%;
-                }
-                .contractData{
-                    margin-bottom:'10px'
-                }
-                .boldC{
-                    display:inline-block;
-                    font-size: 28px;
-                    text-align:justify;
-                    font-weight:bold
-                }
-              </style>
+             ${style}
            </head>
            <body>
                 <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image" src="http://104.248.54.46:3900/static/media/logo-blanco.jpg" >
+                            <img class="image">
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
@@ -465,215 +467,13 @@ module.exports =(data) =>{
            <head>
               <meta charset="utf-8">
               <title>PDF Certificado Metrolinea</title>
-              <style>
-              
-                .image-container{
-                    height: 80px;
-                    width: 250px;
-                    position: relative;
-                    background:red;
-                    overflow:hidden;
-                }
-                .image {
-                    width: 100%;
-                    max-width: 250px;
-                    height: 270px;
-                    top:0px;
-                    left:0px;
-                    background-size: contain;
-                    position:absolute;
-                }
-                html {
-                    height: 100%;
-                    width: 100%;
-                }
-                body {
-                    padding:20px 50px 100px 50px;
-                    width:100%;
-                    height: 100%;
-                    position:relative;
-                    box-sizing: border-box;           
-                    margin: 0;
-                }
-                .header{
-                    height: 120px;
-                    border-bottom: 2px solid yellow;
-                    width:100%;
-                    position:absolute;
-                    top:-40px;
-                }
-                .body{
-                    height:auto;
-                    width:100%;
-                    padding: 30px 50px;
-                    box-sizing: border-box;
-                }
-                .footer {
-                    height: 100%;
-                    width: calc(100% - 50px);
-                    position: absolute;
-                    bottom: 20px;
-                    left: 25px;
-                }
-                
-                .section {
-                    margin: 10;
-                    padding: 10;
-                    flex-grow: 1
-                }
-                .metrolineaImage{
-                    width:120px;
-                    height:100px;
-                    background-size:100%
-                }
-                .footerContent{
-                    position:absolute;
-                    height:60px;
-                    width:100%;
-                    bottom:0;
-                    left:0;
-                    border-top: 1px solid yellow;
-                    padding-top:10px
-                }
-                .left{
-                    margin: 10px;
-                    padding: 10px;
-                    width:50%;
-                    height:100%;
-                    float:left;
-                }
-                .rigth{
-                    margin: 10px;
-                    padding: 10px;
-                    width:40%;
-                    height:100%;
-                    float:left;                
-                    position: relative;
-                }
-                .text2{
-                    font-size:20px;
-                    font-family:'Roboto-Bold'
-                }
-                .fo {
-                    text-align: right;
-                    font-size: 22px;
-                    width: 200px;
-                    height: 20px;
-                    font-weight: bold;
-                    right: 50px;
-                    top: 30px;
-                    position: absolute;
-                }
-                .text1 {
-                    font-size: 14px;
-                }
-             
-                .title{
-                    text-align:center;
-                    padding:10px 0;
-                    text-transform:uppercase;
-                    font-weight:bold;
-                    font-size:30px
-
-                }
-                .justifyP{
-                    text-align:justify;
-                    font-size:28px;
-                    margin-bottom:10px
-                }
-                .boldP{
-                    display:inline-block;
-                    font-family:'Roboto';
-                    font-weight:bold;
-                    font-size:28px;
-                    float:left;
-                    text-align:justify
-                }
-                .flexRow{
-                    width:100%;
-                    font-size:22px;
-                    height:28px;
-                    margin-top: 20px
-                }
-                .flexRow2{
-                    width:100%;
-                    font-size:28px;
-                    height:28px;
-                    margin-top: 10px
-                }
-                .col1{
-                    width: 46%;
-                    font-size:28px;
-                    font-weight:bold;
-                    float:left;
-                }
-                .col2{
-                    width: 50%;
-                    font-size:28px;
-                    text-align:justify;
-                    float:left;
-                }
-                .fullWidthText{
-                    margin-bottom:30px;
-                    margin-top: 30px;
-                    width:100%;
-                    text-align:justify;
-                    padding: 0 30px;
-                    box-sizing: border-box
-                }
-                .fullWidthText2{
-                    margin-bottom:30px;
-                    margin-top: 30px;
-                    width:100%;
-                    text-align:justify;
-                    padding: 0 30px;
-                    box-sizing: border-box;
-                    display:block;
-
-                }
-                .contractTitle{
-                    margin-top: 20px;
-                    margin-bottom: 10px;
-                    width:100%;
-                    display: block;
-                    float:left;
-                }
-                .footerText{
-                    text-align:center;
-                    font-size:16px;
-                }
-                .footerTextContainer{
-                    height: 16px;
-                    flex-grow: 1;
-                    position:relative
-                }
-                a.footerText {
-                    position: absolute;
-                    transform: translate(-50%,-50%);
-                    left: 50%;
-                    top: 50%;
-                }
-                .contractData{
-                    margin-bottom:30px;
-                    margin-top: 30px;
-                    width:100%;
-                    text-align:justify;
-                    padding: 0 30px;
-                    box-sizing: border-box
-                }
-                .boldC{
-                    display:inline-block;
-                    font-size: 28px;
-                    text-align:justify;
-                    font-weight:bold
-                }
-              </style>
+              ${style}
            </head>
            <body>
                 <header id="pageHeader" class="header">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image" src="https://scontent.fclo7-1.fna.fbcdn.net/v/t39.30808-6/216680881_4256083404453053_4237819903162822370_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=973b4a&_nc_ohc=UUnU1C7QgeYAX-SPbfn&_nc_ht=scontent.fclo7-1.fna&oh=c190b10b23598ec6da21e03a7e354026&oe=6122905E" >
+                            <img class="image">
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
