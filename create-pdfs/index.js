@@ -10,9 +10,7 @@ module.exports =(data) =>{
     .image {
         width: 200px;
         height: 250px;
-        top:0px;
-        position:absolute;
-        left:0px;
+        opacity:1;
     }
     html {
         height: 100%;
