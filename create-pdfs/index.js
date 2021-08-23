@@ -3,17 +3,20 @@ module.exports =(data) =>{
     var style= `<style>
               
     .image-container{
-        height: 60px;
-        width: 150px;
+        height: 38px;
+        width: 200px;
         position: relative;
-    }
-    .image {
-        width: 180px;
-        height: 40px;
-        opacity:1;
+        overflow: hidden;
+     }
+     .image {
+        width: 210px;
+        height: 42px;
+        position: absolute;
+        left: -2px;
+        top: -2px;
         background: url(https://upload.wikimedia.org/wikipedia/commons/8/8c/Metrol%C3%ADnea_logo.svg);
-      background-size:contain;
-      background-repeat: no-repeat;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
     html {
         height: 100%;
