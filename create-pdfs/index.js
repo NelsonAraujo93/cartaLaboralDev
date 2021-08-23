@@ -59,9 +59,9 @@ module.exports =(data) =>{
                 .header{
                     height: 120px;
                     border-bottom: 2px solid yellow;
-                    width:100%;
+                    width: calc(100% - 50px);
                     position:absolute;
-                    top:-80px;
+                    top:80px;
                     left:25px;
                 }
                 .body{
