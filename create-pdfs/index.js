@@ -211,7 +211,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image" src="https://scontent.fclo7-1.fna.fbcdn.net/v/t39.30808-6/216680881_4256083404453053_4237819903162822370_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=973b4a&_nc_ohc=UUnU1C7QgeYAX-SPbfn&_nc_ht=scontent.fclo7-1.fna&oh=c190b10b23598ec6da21e03a7e354026&oe=6122905E" >
+                            <img class="image" src="./images/logo-blanco.jpg" alt="etrolinea-logo" >
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
