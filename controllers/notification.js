@@ -397,7 +397,9 @@ var controller = {
         pdf.create(pdfTemplate(req.body),
             {
                 "format": "A4",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
-                "orientation": "portrait", // portrait or landscape
+                "orientation": "portrait",
+                 // portrait or landscape
+                base: 'file:///' + __dirname + '/images/',
                 "zoomFactor": "1", 
                 "type": "pdf",
                 "quality": "75", 

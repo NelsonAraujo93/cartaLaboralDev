@@ -212,7 +212,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image"  src="http://104.248.54.46:3900/static/media/logo-blanco.jpg" alt="imagen de metrolinea">
+                            <img class="image"  src="logo-blanco.jpg">
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
@@ -472,7 +472,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image"  src="http://104.248.54.46:3900/static/media/logo-blanco.jpg" alt="imagen de metrolinea">
+                            <img class="image"  src="logo-blanco.jpg" >
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
