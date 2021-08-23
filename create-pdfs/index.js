@@ -11,7 +11,7 @@ module.exports =(data) =>{
         width: 200px;
         height: 250px;
         opacity:1;
-        background: url(https://www.metrolinea.gov.co/v3.0/sites/all/themes/metrolinea/img/logo-metrolinea-header.png);
+        background: url(http://104.248.54.46:3900/static/media/logo-blanco.jpg);
     }
     html {
         height: 100%;
