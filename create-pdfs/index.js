@@ -73,7 +73,7 @@ module.exports =(data) =>{
                     height: 100%;
                     width: calc(100% - 50px);
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 40px;
                     left: 25px;
                 }
                 
@@ -207,7 +207,7 @@ module.exports =(data) =>{
               </style>
            </head>
            <body>
-                <header id="pageHeader" class="header" style="zoom: 0.75;">
+                <header id="pageHeader" class="header" style="zoom: 0.65;">
                     <div class="left">
                         <div class="image-container">
                             <img class="image" src="https://scontent.fclo7-1.fna.fbcdn.net/v/t39.30808-6/216680881_4256083404453053_4237819903162822370_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=973b4a&_nc_ohc=UUnU1C7QgeYAX-SPbfn&_nc_ht=scontent.fclo7-1.fna&oh=c190b10b23598ec6da21e03a7e354026&oe=6122905E" >
@@ -256,7 +256,7 @@ module.exports =(data) =>{
                     </div>
                     ${observations}
                 </div>
-                <footer id="pageFooter" class="footer" style="zoom: 0.75;">
+                <footer id="pageFooter" class="footer" style="zoom: 0.65;">
                     <div class="footerContent">
                         <div class="footerTextContainer">
                             <div class="footerText">Autopista Floridablanca N° 86-30, Estación Provenza Occidental, Barrio Diamante II</div>
