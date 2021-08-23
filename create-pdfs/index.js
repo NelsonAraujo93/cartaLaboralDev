@@ -6,8 +6,6 @@ module.exports =(data) =>{
         height: 300px;
         width: 150px;
         position: relative;
-        background:red;
-        overflow:hidden;
     }
     .image {
         width: 200px;
@@ -15,7 +13,6 @@ module.exports =(data) =>{
         top:0px;
         position:absolute;
         left:0px;
-        
     }
     html {
         height: 100%;
