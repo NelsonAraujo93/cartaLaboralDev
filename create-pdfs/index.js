@@ -10,11 +10,12 @@ module.exports =(data) =>{
         overflow:hidden;
     }
     .image {
-        width: 100%;
-        max-width: 150px;
+        width: 200px;
         height: 250px;
-        top:-80px;
+        top:0px;
         position:absolute;
+        left:0px;
+        
     }
     html {
         height: 100%;
