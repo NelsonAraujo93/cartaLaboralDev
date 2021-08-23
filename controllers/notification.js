@@ -396,6 +396,11 @@ var controller = {
         //pdfName
         pdf.create(pdfTemplate(req.body),
             {
+                "format": "A4",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
+                "orientation": "portrait", // portrait or landscape
+                "zoomFactor": "1", 
+                "type": "pdf",
+                "quality": "75", 
                 "header": {
                     "height": "45mm",
                 },
