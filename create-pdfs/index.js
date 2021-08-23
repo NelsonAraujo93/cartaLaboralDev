@@ -61,7 +61,8 @@ module.exports =(data) =>{
                     border-bottom: 2px solid yellow;
                     width:100%;
                     position:absolute;
-                    top:-40px;
+                    top:-80px;
+                    left:25px;
                 }
                 .body{
                     height:auto;
@@ -73,7 +74,7 @@ module.exports =(data) =>{
                     height: 100%;
                     width: calc(100% - 50px);
                     position: absolute;
-                    bottom: 90px;
+                    bottom: 110px;
                     left: 25px;
                 }
                 
