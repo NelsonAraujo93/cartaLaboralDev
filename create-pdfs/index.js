@@ -3,7 +3,7 @@ module.exports =(data) =>{
     var style= `<style>
               
     .image-container{
-        height: 70px;
+        height: 300px;
         width: 150px;
         position: relative;
         background:red;
