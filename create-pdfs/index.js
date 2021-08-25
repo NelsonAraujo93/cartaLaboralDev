@@ -150,7 +150,7 @@ module.exports =(data) =>{
         width:100%;
         text-align:justify;
         padding: 0 30px;
-        box-sizing: border-box
+        box-sizing: border-box;
     }
     .contractTitle{
         margin-top: 10px;
@@ -172,7 +172,8 @@ module.exports =(data) =>{
         top: 50%;
     }
     .contractData{
-        margin-bottom:'10px'
+        margin-bottom:10px;
+        width:100%;
     }
     .boldC{
         display:inline-block;
@@ -288,7 +289,7 @@ module.exports =(data) =>{
             if(contractArrayEjecuta.length>=1){
                 contractArrayEjecuta=contractArrayEjecuta.map((contract,i)=>{
                     var detalles;
-                    if(contract.details!==undefined){
+                    if(contract.details!==''){
                             detalles=`<div class="flexRow2">
                             <div class="col1">
                                 DETALLES:  
@@ -376,7 +377,7 @@ module.exports =(data) =>{
     
                 contractArraySuscribio=contractArraySuscribio.map((contract,i)=>{
                     var detalles;
-                    if(contract.details!==undefined){
+                    if(contract.details!==''){
                             detalles=`<div class="flexRow">
                             <div class="col1">
                                 DETALLES:  
