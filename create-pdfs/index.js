@@ -463,13 +463,13 @@ module.exports =(data) =>{
         var user=user=data.pdfInfo.user;
         return `
         <!doctype html>
-        <html>
+        <html zoom: 0.45;>
            <head>
               <meta charset="utf-8">
               <title>PDF Certificado Metrolinea</title>
               ${style}
            </head>
-           <body>
+           <body zoom: 0.45;>
                 <header id="pageHeader" class="header">
                     <div class="left">
                         <div class="image-container">
