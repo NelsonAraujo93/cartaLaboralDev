@@ -154,6 +154,7 @@ module.exports =(data) =>{
     }
     .contractTitle{
         margin-top: 10px;
+        width:100%;
     }
     .footerText{
         text-align:center;
