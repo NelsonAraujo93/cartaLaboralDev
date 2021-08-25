@@ -264,7 +264,7 @@ var controller = {
         }
         if (validate_name && validate_pass) {
             dbConnection.query("SELECT * FROM login WHERE name = ?", params.name,  async (err, result) => {
-                if(!result){
+                if(!result[0]){
                     return res.status(404).send({
                         status: 'error',
                         message: err
