@@ -469,8 +469,8 @@ module.exports =(data) =>{
               <title>PDF Certificado Metrolinea</title>
               ${style}
            </head>
-           <body  style="zoom: 0.45;">
-                <header id="pageHeader" class="header">
+           <body>
+                <header id="pageHeader" class="header"  style="zoom: 0.45;>
                     <div class="left">
                         <div class="image-container">
                             <img class="image">
@@ -496,7 +496,7 @@ module.exports =(data) =>{
                    ${ejecuta}
                    ${suscribio}
                 </div>
-                <footer id="pageFooter" class="footer">
+                <footer id="pageFooter" class="footer"  style="zoom: 0.45;>
                     <div class="footerContent">
                         <div class="footerTextContainer">
                             <div class="footerText">Autopista Floridablanca N° 86-30, Estación Provenza Occidental, Barrio Diamante II</div>
