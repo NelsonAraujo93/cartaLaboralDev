@@ -305,13 +305,14 @@ module.exports =(data) =>{
                                 <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
                                 </div>
                             </div>
-                            <div class="boldP">OBJETO: 
+                            <div class="fullWidthText">
+                                <div class="boldP">OBJETO: 
+                                </div>
+                                
+                                <div class="justifyP">${contract.object}
+                                </div>
                             </div>
-                            
-                            <div class="justifyP">${contract.object}
-                            </div>
-                            
-                            <div class="flexRow2">
+                            <div class="flexRow">
                                 <div class="col1">
                                     VALOR DEL CONTRATO:  
                                 </div>
@@ -320,7 +321,7 @@ module.exports =(data) =>{
         
                                 </div>
                             </div>
-                            <div class="flexRow2">
+                            <div class="flexRow">
                                 <div class="col1">
                                     PLAZO DE CONTRATO:  
                                 </div>
@@ -329,7 +330,7 @@ module.exports =(data) =>{
         
                                 </div>
                             </div>
-                            <div class="flexRow2">
+                            <div class="flexRow">
                                 <div class="col1">
                                     INTERVENTOR:  
                                 </div>
@@ -338,7 +339,7 @@ module.exports =(data) =>{
         
                                 </div>
                             </div>
-                            <div class="flexRow2">
+                            <div class="flexRow">
                                 <div class="col1">
                                     FECHA DE INICIO:  
                                 </div>
@@ -347,7 +348,7 @@ module.exports =(data) =>{
         
                                 </div>
                             </div>
-                            <div class="flexRow2">
+                            <div class="flexRow">
                                 <div class="col1">
                                     FECHA DE TERMINACIÓN:  
                                 </div>
@@ -375,7 +376,7 @@ module.exports =(data) =>{
                 contractArraySuscribio=contractArraySuscribio.map((contract,i)=>{
                     var detalles;
                     if(contract.details!==undefined){
-                            detalles=`<div class="flexRow2">
+                            detalles=`<div class="flexRow">
                             <div class="col1">
                                 DETALLES:  
                             </div>
@@ -392,13 +393,15 @@ module.exports =(data) =>{
                             <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
                             </div>
                         </div>
-                        <div class="boldP">OBJETO: 
+                        <div class="fullWidthText">
+                            <div class="boldP">OBJETO: 
+                            </div>
+                            
+                            <div class="justifyP">${contract.object}
+                            </div>
                         </div>
-                        
-                        <div class="justifyP">${contract.object}
-                        </div>
-                        
-                        <div class="flexRow2">
+                    
+                        <div class="flexRow">
                             <div class="col1">
                                 VALOR DEL CONTRATO:  
                             </div>
@@ -407,7 +410,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow2">
+                        <div class="flexRow">
                             <div class="col1">
                                 PLAZO DE CONTRATO:  
                             </div>
@@ -416,7 +419,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow2">
+                        <div class="flexRow">
                             <div class="col1">
                                 INTERVENTOR:  
                             </div>
@@ -425,7 +428,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow2">
+                        <div class="flexRow">
                             <div class="col1">
                                 FECHA DE INICIO:  
                             </div>
@@ -434,7 +437,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow2">
+                        <div class="flexRow">
                             <div class="col1">
                                 FECHA DE TERMINACIÓN:  
                             </div>
@@ -470,7 +473,7 @@ module.exports =(data) =>{
               ${style}
            </head>
            <body>
-                <header id="pageHeader" class="header"  style="zoom: 0.45;>
+                <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
                             <img class="image">
