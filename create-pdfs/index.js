@@ -317,7 +317,7 @@ module.exports =(data) =>{
                             </div>
                         </div>`;
                     }else{
-                        detalles=`<div class="fullWidthText"><br> </div>`;
+                        detalles=`<div class="emptyDetail"></div>`;
                     }
                     return(
                         `<div class="containerInfo">
@@ -398,7 +398,7 @@ module.exports =(data) =>{
                             </div>
                         </div>`;
                     }else{
-                        detalles=`<div class="fullWidthText"><br> </div>`;
+                        detalles=`<div class="emptyDetail"></div>`;
                     }
                     return(
                         `<div class="containerInfo">
@@ -415,7 +415,6 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     $(${contract.value})
-
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -433,7 +432,6 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.supervisor}
-
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -442,7 +440,6 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.date}
-
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -451,7 +448,6 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.finish_date}
-
                                 </div>
                             </div>
                             ${detalles}
