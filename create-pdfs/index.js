@@ -185,6 +185,13 @@ module.exports =(data) =>{
         text-align:justify;
         font-weight:bold
     }
+    .container-contract-info{
+        margin-top: 30px;
+        width:100%;
+        text-align:justify;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
   </style>`;
     var observations=`<div class="fullWidthText">
                         <div class="boldC">
@@ -306,7 +313,9 @@ module.exports =(data) =>{
                         detalles='';
                     }
                     return(
-                        `<div class="fullWidthText">
+                        `
+                        <div class="container-contract-info">
+                        <div class="fullWidthText">
                             <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
                             </span><br>
                         </div>
@@ -362,6 +371,7 @@ module.exports =(data) =>{
                             </div>
                         </div>
                         ${detalles}
+                        </div>
                     `
                     );
                 });
@@ -391,7 +401,8 @@ module.exports =(data) =>{
                         detalles='';
                     }
                     return(
-                        `<div class="fullWidthText">
+                        `<div class="container-contract-info">
+                        <div class="fullWidthText">
                             <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
                             </span><br>
                         </div>
@@ -447,6 +458,8 @@ module.exports =(data) =>{
                             </div>
                         </div>
                         ${detalles}
+                        
+                        </div>
                     `
                     );
                 });
