@@ -322,7 +322,7 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
+                                <span class="boldP"><br>Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
                             </div>
                             <div class="fullWidthText">
                             <br><span class="boldP">OBJETO: '</span><span class="justifyP">${contract.object}'</span>
@@ -379,7 +379,7 @@ module.exports =(data) =>{
                 
             ejecuta=`
                     <div class="fullWidthText2">
-                        <div class="styleboldP"><span class="boldP"><br>${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
+                        <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                         </div>
                     </div>
                     ${contractArrayEjecuta}
@@ -404,7 +404,7 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
+                                <span class="boldP"><br>Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
                             </div>
                             <div class="fullWidthText">
                                 <br><span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
@@ -460,7 +460,7 @@ module.exports =(data) =>{
                 });
             suscribio=`
                 <div class="fullWidthText2">
-                    <div class="styleboldP"><span class="boldP"><br>${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
+                    <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                     </div>
                 </div>
                 ${contractArraySuscribio}
@@ -505,6 +505,7 @@ module.exports =(data) =>{
                         </div>
                     </div>
                    ${ejecuta}
+                   <br>
                    ${suscribio}
                 </div>
                 <footer id="pageFooter" class="footer" style="zoom: 0.45;">
