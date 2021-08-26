@@ -290,7 +290,7 @@ module.exports =(data) =>{
                 contractArrayEjecuta=contractArrayEjecuta.map((contract,i)=>{
                     var detalles;
                     if(contract.details!==''){
-                            detalles=`<div class="flexRow2">
+                            detalles=`<div class="flexRow">
                             <div class="col1">
                                 DETALLES:  
                             </div>
@@ -359,19 +359,18 @@ module.exports =(data) =>{
         
                                 </div>
                             </div>
-                            
                             ${detalles}
                         </div>`
                     );
                 });
                 
-            ejecuta=` <div>
+            ejecuta=`
                     <div class="fullWidthText">
                         <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                         </div>
                     </div>
-                    <div>${contractArrayEjecuta}</div>
-            </div>`;
+                    ${contractArrayEjecuta}
+           `;
             }
             if(contractArraySuscribio.length>=1){
     
@@ -390,76 +389,76 @@ module.exports =(data) =>{
                         detalles='';
                     }
                     return(
-                        `<div  class="contractData">
-                        <div class="contractTitle">
-                            <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
+                        `<div class="contractData">
+                            <div class="contractTitle">
+                                <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="boldP">OBJETO: 
+                            <div class="fullWidthText">
+                                <div class="boldP">OBJETO: 
+                                </div>
+                                
+                                <div class="justifyP">${contract.object}
+                                </div>
                             </div>
-                            
-                            <div class="justifyP">${contract.object}
+                        
+                            <div class="flexRow">
+                                <div class="col1">
+                                    VALOR DEL CONTRATO:  
+                                </div>
+                                <div class="col2">
+                                    (${contract.value})
+        
+                                </div>
                             </div>
-                        </div>
-                    
-                        <div class="flexRow">
-                            <div class="col1">
-                                VALOR DEL CONTRATO:  
+                            <div class="flexRow">
+                                <div class="col1">
+                                    PLAZO DE CONTRATO:  
+                                </div>
+                                <div class="col2">
+                                    ${contract.execution_time}
+        
+                                </div>
                             </div>
-                            <div class="col2">
-                                (${contract.value})
-    
+                            <div class="flexRow">
+                                <div class="col1">
+                                    INTERVENTOR:  
+                                </div>
+                                <div class="col2">
+                                    ${contract.supervisor}
+        
+                                </div>
                             </div>
-                        </div>
-                        <div class="flexRow">
-                            <div class="col1">
-                                PLAZO DE CONTRATO:  
+                            <div class="flexRow">
+                                <div class="col1">
+                                    FECHA DE INICIO:  
+                                </div>
+                                <div class="col2">
+                                    ${contract.date}
+        
+                                </div>
                             </div>
-                            <div class="col2">
-                                ${contract.execution_time}
-    
+                            <div class="flexRow">
+                                <div class="col1">
+                                    FECHA DE TERMINACIÓN:  
+                                </div>
+                                <div class="col2">
+                                    ${contract.finish_date}
+        
+                                </div>
                             </div>
-                        </div>
-                        <div class="flexRow">
-                            <div class="col1">
-                                INTERVENTOR:  
-                            </div>
-                            <div class="col2">
-                                ${contract.supervisor}
-    
-                            </div>
-                        </div>
-                        <div class="flexRow">
-                            <div class="col1">
-                                FECHA DE INICIO:  
-                            </div>
-                            <div class="col2">
-                                ${contract.date}
-    
-                            </div>
-                        </div>
-                        <div class="flexRow">
-                            <div class="col1">
-                                FECHA DE TERMINACIÓN:  
-                            </div>
-                            <div class="col2">
-                                ${contract.finish_date}
-    
-                            </div>
-                        </div>
                             ${detalles}
                         </div>`
                     );
                 });
-                suscribio=` <div>
+                suscribio=`
                         <div class="fullWidthText">
                             <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                             </div>
                         </div>
-                        <div>${contractArraySuscribio}</div>
-                    </div>`;
-                }
+                        ${contractArraySuscribio}
+                `;
+            }
         }else{
             ejecuta=` `;
     
@@ -501,7 +500,7 @@ module.exports =(data) =>{
                    ${ejecuta}
                    ${suscribio}
                 </div>
-                <footer id="pageFooter" class="footer"  style="zoom: 0.45;>
+                <footer id="pageFooter" class="footer" style="zoom: 0.45;">
                     <div class="footerContent">
                         <div class="footerTextContainer">
                             <div class="footerText">Autopista Floridablanca N° 86-30, Estación Provenza Occidental, Barrio Diamante II</div>
@@ -518,7 +517,6 @@ module.exports =(data) =>{
                         </div>
                     </div>
                 </footer>
-            
            </body>
         </html>
         `;
