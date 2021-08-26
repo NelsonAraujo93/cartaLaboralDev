@@ -373,7 +373,8 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                        </div><br><br>`);
+                            <br><br>
+                        </div>`);
                 });
                 
             ejecuta=`
@@ -401,7 +402,7 @@ module.exports =(data) =>{
                         detalles=`<div class="fullWidthText"></div>`;
                     }
                     return(
-                        `<div class="containerInfo">
+                        `<br><br><div class="containerInfo">
                             <div class="fullWidthText">
                                 <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br></span>
                             </div><br>
@@ -455,7 +456,7 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                        </div><br><br>`);
+                        </div>`);
                 });
             suscribio=`
                 <div class="fullWidthText2">
