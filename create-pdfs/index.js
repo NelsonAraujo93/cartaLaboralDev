@@ -302,7 +302,7 @@ module.exports =(data) =>{
                 contractArrayEjecuta=contractArrayEjecuta.map((contract,i)=>{
                     var detalles;
                     if(contract.details!==''){
-                            detalles=`<div class="fullWidthText">
+                        detalles=`<div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">DETALLES:  </span>
                             </div>
@@ -314,18 +314,18 @@ module.exports =(data) =>{
                         detalles=`<div class="fullWidthText"></div>`;
                     }
                     return(
-                        `
-                        <div class="containerInfo">
+                        `<div class="containerInfo">
                             <div class="fullWidthText">
                                 <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>OBJETO: </span><span class="justifyP"> ${contract.object}</span>
                             </div>
+                            
                             <div class="fullWidthText">
                                 <div class="col1">
                                     <span class="boldP">VALOR DEL CONTRATO: </span> 
                                 </div>
                                 <div class="col2">
                                     $(${contract.value})
-        
+
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -334,7 +334,7 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.execution_time}
-        
+
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -343,7 +343,7 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.supervisor}
-        
+
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -352,7 +352,7 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.date}
-        
+
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -361,7 +361,7 @@ module.exports =(data) =>{
                                 </div>
                                 <div class="col2">
                                     ${contract.finish_date}
-        
+
                                 </div>
                             </div>
                             ${detalles}
@@ -450,13 +450,13 @@ module.exports =(data) =>{
                     `
                     );
                 });
-                suscribio=`
-                    <div class="fullWidthText">
-                        <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
-                        </div>
+            suscribio=`
+                <div class="fullWidthText">
+                    <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP"> , identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                     </div>
-                    ${contractArraySuscribio}
-                `;
+                </div>
+                ${contractArraySuscribio}
+            `;
             }
         }else{
             ejecuta=` `;
