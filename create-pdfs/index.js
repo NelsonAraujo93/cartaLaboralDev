@@ -193,8 +193,9 @@ module.exports =(data) =>{
     }
     .containerInfo{
         margin-top: 30px;
-        padding-bottom: 30px;
+        padding: 30px 0;
         width:100%;
+        height:auto;
         text-align:justify;
         box-sizing: border-box;
     }
@@ -316,7 +317,7 @@ module.exports =(data) =>{
                             </div>
                         </div>`;
                     }else{
-                        detalles=`<div class="fullWidthText"><br></div>`;
+                        detalles=`<div class="fullWidthText"></div>`;
                     }
                     return(
                         `<div class="containerInfo">
@@ -324,7 +325,7 @@ module.exports =(data) =>{
                                 <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
                             </div>
                             <div class="fullWidthText">
-                            <br><span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
+                            <br><span class="boldP">OBJETO: '</span><span class="justifyP">${contract.object}'</span>
                             </div>
                             
                             <div class="fullWidthText">
@@ -373,13 +374,12 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                            <br><br>
                         </div>`);
                 });
                 
             ejecuta=`
                     <div class="fullWidthText2">
-                        <div class="styleboldP"><br><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
+                        <div class="styleboldP"><span class="boldP"><br>${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                         </div>
                     </div>
                     ${contractArrayEjecuta}
@@ -399,15 +399,15 @@ module.exports =(data) =>{
                             </div>
                         </div>`;
                     }else{
-                        detalles=`<div class="fullWidthText"><br></div>`;
+                        detalles=`<div class="fullWidthText"></div>`;
                     }
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
                                 <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
-                            </div><br>
+                            </div>
                             <div class="fullWidthText">
-                                <span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
+                                <br><span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
                             </div>
                             
                             <div class="fullWidthText">
@@ -460,7 +460,7 @@ module.exports =(data) =>{
                 });
             suscribio=`
                 <div class="fullWidthText2">
-                    <div class="styleboldP"><br><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
+                    <div class="styleboldP"><span class="boldP"><br>${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                     </div>
                 </div>
                 ${contractArraySuscribio}
