@@ -302,65 +302,67 @@ module.exports =(data) =>{
                         detalles='';
                     }
                     return(
-                        `<div  class="contractData">
+                        `<div class="fullWidthText">
                             <div class="contractTitle">
                                 <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
                                 </div>
                             </div>
-                            <div class="fullWidthText">
-                                <div class="boldP">OBJETO: 
-                                </div>
-                                
-                                <div class="justifyP">${contract.object}
-                                </div>
+                        </div>
+                        <div class="fullWidthText">
+                            <div class="boldP">OBJETO: 
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    VALOR DEL CONTRATO:  
-                                </div>
-                                <div class="col2">
-                                    (${contract.value})
-        
-                                </div>
+                            
+                            <div class="justifyP">${contract.object}
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    PLAZO DE CONTRATO:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.execution_time}
-        
-                                </div>
+                        </div>
+                        
+                        <div class="flexRow">
+                            <div class="col1">
+                                VALOR DEL CONTRATO:  
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    INTERVENTOR:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.supervisor}
-        
-                                </div>
+                            <div class="col2">
+                                (${contract.value})
+    
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    FECHA DE INICIO:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.date}
-        
-                                </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                PLAZO DE CONTRATO:  
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    FECHA DE TERMINACIÓN:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.finish_date}
-        
-                                </div>
+                            <div class="col2">
+                                ${contract.execution_time}
+    
                             </div>
-                            ${detalles}
-                        </div>`
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                INTERVENTOR:  
+                            </div>
+                            <div class="col2">
+                                ${contract.supervisor}
+    
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                FECHA DE INICIO:  
+                            </div>
+                            <div class="col2">
+                                ${contract.date}
+    
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                FECHA DE TERMINACIÓN:  
+                            </div>
+                            <div class="col2">
+                                ${contract.finish_date}
+    
+                            </div>
+                        </div>
+                        ${detalles}
+                    `
                     );
                 });
                 
@@ -389,66 +391,67 @@ module.exports =(data) =>{
                         detalles='';
                     }
                     return(
-                        `<div class="contractData">
+                        `<div class="fullWidthText">
                             <div class="contractTitle">
                                 <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
                                 </div>
                             </div>
-                            <div class="fullWidthText">
-                                <div class="boldP">OBJETO: 
-                                </div>
-                                
-                                <div class="justifyP">${contract.object}
-                                </div>
+                        </div>
+                        <div class="fullWidthText">
+                            <div class="boldP">OBJETO: 
                             </div>
+                            
+                            <div class="justifyP">${contract.object}
+                            </div>
+                        </div>
                         
-                            <div class="flexRow">
-                                <div class="col1">
-                                    VALOR DEL CONTRATO:  
-                                </div>
-                                <div class="col2">
-                                    (${contract.value})
-        
-                                </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                VALOR DEL CONTRATO:  
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    PLAZO DE CONTRATO:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.execution_time}
-        
-                                </div>
+                            <div class="col2">
+                                (${contract.value})
+    
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    INTERVENTOR:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.supervisor}
-        
-                                </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                PLAZO DE CONTRATO:  
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    FECHA DE INICIO:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.date}
-        
-                                </div>
+                            <div class="col2">
+                                ${contract.execution_time}
+    
                             </div>
-                            <div class="flexRow">
-                                <div class="col1">
-                                    FECHA DE TERMINACIÓN:  
-                                </div>
-                                <div class="col2">
-                                    ${contract.finish_date}
-        
-                                </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                INTERVENTOR:  
                             </div>
-                            ${detalles}
-                        </div>`
+                            <div class="col2">
+                                ${contract.supervisor}
+    
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                FECHA DE INICIO:  
+                            </div>
+                            <div class="col2">
+                                ${contract.date}
+    
+                            </div>
+                        </div>
+                        <div class="flexRow">
+                            <div class="col1">
+                                FECHA DE TERMINACIÓN:  
+                            </div>
+                            <div class="col2">
+                                ${contract.finish_date}
+    
+                            </div>
+                        </div>
+                        ${detalles}
+                    `
                     );
                 });
                 suscribio=`
