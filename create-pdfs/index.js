@@ -373,7 +373,7 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                        </div>`);
+                        </div><br><br>`);
                 });
                 
             ejecuta=`
@@ -455,7 +455,7 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                        </div>`);
+                        </div><br><br>`);
                 });
             suscribio=`
                 <div class="fullWidthText2">
