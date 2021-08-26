@@ -185,7 +185,7 @@ module.exports =(data) =>{
     }
     .containerInfo{
         margin-top: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         width:100%;
         text-align:justify;
         padding: 0 30px;
@@ -314,7 +314,8 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>OBJETO: </span><span class="justifyP"> ${contract.object}</span>
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br></span>
+                                <span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
                             </div>
                             
                             <div class="fullWidthText">
@@ -363,9 +364,7 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                        </div>
-                    `
-                    );
+                        </div>`);
                 });
                 
             ejecuta=`
@@ -395,7 +394,8 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>OBJETO: </span><span class="justifyP"> ${contract.object}</span>
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br></span>
+                                <span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
                             </div>
                             
                             <div class="fullWidthText">
@@ -444,13 +444,11 @@ module.exports =(data) =>{
                                 </div>
                             </div>
                             ${detalles}
-                        </div>
-                    `
-                    );
+                        </div>`);
                 });
             suscribio=`
                 <div class="fullWidthText">
-                    <div class="styleboldP"><span class="boldP">${user.name}, </span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
+                    <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                     </div>
                 </div>
                 ${contractArraySuscribio}
