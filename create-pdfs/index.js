@@ -311,17 +311,14 @@ module.exports =(data) =>{
                             </div>
                         </div>`;
                     }else{
-                        detalles='';
+                        detalles=`<div class="fullWidthText"></div>`;
                     }
                     return(
                         `
                         <div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>
-                                </span>
-                            </div>
-                            <div class="fullWidthText">
-                                <span class="boldP">OBJETO: </span>
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
+                                </span><br><span class="boldP">OBJETO: </span>
                                 <span class="justifyP"> ${contract.object}
                                 </span>
                             </div>
@@ -331,7 +328,7 @@ module.exports =(data) =>{
                                     <span class="boldP">VALOR DEL CONTRATO: </span> 
                                 </div>
                                 <div class="col2">
-                                    (${contract.value})
+                                    $(${contract.value})
         
                                 </div>
                             </div>
@@ -399,16 +396,13 @@ module.exports =(data) =>{
                             </div>
                         </div>`;
                     }else{
-                        detalles='';
+                        detalles=`<div class="fullWidthText"></div>`;
                     }
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>
-                                </span>
-                            </div>
-                            <div class="fullWidthText">
-                                <span class="boldP">OBJETO: </span>
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
+                                </span><br><span class="boldP">OBJETO: </span>
                                 <span class="justifyP"> ${contract.object}
                                 </span>
                             </div>
@@ -418,7 +412,7 @@ module.exports =(data) =>{
                                     <span class="boldP">VALOR DEL CONTRATO: </span> 
                                 </div>
                                 <div class="col2">
-                                    (${contract.value})
+                                    $(${contract.value})
 
                                 </div>
                             </div>
@@ -464,11 +458,11 @@ module.exports =(data) =>{
                     );
                 });
                 suscribio=`
-                        <div class="fullWidthText">
-                            <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
-                            </div>
+                    <div class="fullWidthText">
+                        <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                         </div>
-                        ${contractArraySuscribio}
+                    </div>
+                    ${contractArraySuscribio}
                 `;
             }
         }else{
