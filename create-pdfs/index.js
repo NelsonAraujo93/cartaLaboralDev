@@ -137,12 +137,14 @@ module.exports =(data) =>{
         font-size:28px;
         font-family:'Roboto-Bold';
         float:left;
+        position:relative;
     }
     .col2{
         width: 50%;
-        font-size: 28px;
-        text-align: justify;
         float: left;
+        position:relative;
+        box-sizing: border-box;
+        overflow:hidden;
     }
     .fullWidthText{
         margin-bottom:30px;
@@ -290,12 +292,12 @@ module.exports =(data) =>{
                 contractArrayEjecuta=contractArrayEjecuta.map((contract,i)=>{
                     var detalles;
                     if(contract.details!==''){
-                            detalles=`<div class="flexRow">
+                            detalles=`<div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">DETALLES:  </span>
                             </div>
                             <div class="col2">
-                                <span class="justifyP">${contract.details}</span>
+                                <div class="justifyP">${contract.details}</div>
                             </div>
                         </div>`;
                     }else{
@@ -312,7 +314,7 @@ module.exports =(data) =>{
                             </span>
                         </div>
                         
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">VALOR DEL CONTRATO: </span> 
                             </div>
@@ -321,7 +323,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">PLAZO DE CONTRATO: </span> 
                             </div>
@@ -330,7 +332,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">INTERVENTOR:  </span> 
                             </div>
@@ -339,7 +341,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">FECHA DE INICIO:  </span>
                             </div>
@@ -348,7 +350,7 @@ module.exports =(data) =>{
     
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">FECHA DE TERMINACIÓN:  </span>
                             </div>
@@ -375,12 +377,12 @@ module.exports =(data) =>{
                 contractArraySuscribio=contractArraySuscribio.map((contract,i)=>{
                     var detalles;
                     if(contract.details!==''){
-                        detalles=`<div class="flexRow">
+                        detalles=`<div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">DETALLES:  </span>
                             </div>
                             <div class="col2">
-                                <span class="justifyP">${contract.details}</span>
+                                <div class="justifyP">${contract.details}</div>
                             </div>
                         </div>`;
                     }else{
@@ -397,7 +399,7 @@ module.exports =(data) =>{
                             </span>
                         </div>
                         
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">VALOR DEL CONTRATO: </span> 
                             </div>
@@ -406,7 +408,7 @@ module.exports =(data) =>{
 
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">PLAZO DE CONTRATO: </span> 
                             </div>
@@ -415,7 +417,7 @@ module.exports =(data) =>{
 
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">INTERVENTOR:  </span> 
                             </div>
@@ -424,7 +426,7 @@ module.exports =(data) =>{
 
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">FECHA DE INICIO:  </span>
                             </div>
@@ -433,7 +435,7 @@ module.exports =(data) =>{
 
                             </div>
                         </div>
-                        <div class="flexRow">
+                        <div class="fullWidthText">
                             <div class="col1">
                                 <span class="boldP">FECHA DE TERMINACIÓN:  </span>
                             </div>
