@@ -149,7 +149,7 @@ module.exports =(data) =>{
     }
     .fullWidthText{
         margin-bottom:30px;
-        margin-top: 30px;
+        margin-top:30px;
         width:100%;
         text-align:justify;
         padding: 0 30px;
@@ -185,10 +185,9 @@ module.exports =(data) =>{
     }
     .containerInfo{
         margin-top: 30px;
-        margin-bottom: 50px;
+        padding-bottom: 30px;
         width:100%;
         text-align:justify;
-        padding: 0 30px;
         box-sizing: border-box;
     }
   </style>`;
@@ -315,7 +314,9 @@ module.exports =(data) =>{
                         `<div class="containerInfo">
                             <div class="fullWidthText">
                                 <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br></span>
-                                <span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
+                            </div>
+                            <div class="fullWidthText">
+                            <br><span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
                             </div>
                             
                             <div class="fullWidthText">
@@ -395,6 +396,8 @@ module.exports =(data) =>{
                         `<div class="containerInfo">
                             <div class="fullWidthText">
                                 <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br></span>
+                            </div><br>
+                            <div class="fullWidthText">
                                 <span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
                             </div>
                             
