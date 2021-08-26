@@ -138,10 +138,12 @@ module.exports =(data) =>{
         font-family:'Roboto-Bold';
         float:left;
         position:relative;
+        box-sizing: border-box;
     }
     .col2{
-        width: 50%;
+        width: 54%;
         float: left;
+        font-size:28px;
         position:relative;
         box-sizing: border-box;
         overflow:hidden;
