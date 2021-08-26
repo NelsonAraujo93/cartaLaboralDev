@@ -185,8 +185,9 @@ module.exports =(data) =>{
         text-align:justify;
         font-weight:bold
     }
-    .container-contract-info{
+    .containerInfo{
         margin-top: 30px;
+        margin-bottom: 30px;
         width:100%;
         text-align:justify;
         padding: 0 30px;
@@ -314,63 +315,63 @@ module.exports =(data) =>{
                     }
                     return(
                         `
-                        <div class="container-contract-info">
-                        <div class="fullWidthText">
-                            <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
-                            </span><br>
-                        </div>
-                        <div class="fullWidthText">
-                            <span class="boldP">OBJETO: </span>
-                            <span class="justifyP"> ${contract.object}
-                            </span>
-                        </div>
-                        
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">VALOR DEL CONTRATO: </span> 
+                        <div class="containerInfo">
+                            <div class="fullWidthText">
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>
+                                </span>
                             </div>
-                            <div class="col2">
-                                (${contract.value})
-    
+                            <div class="fullWidthText">
+                                <span class="boldP">OBJETO: </span>
+                                <span class="justifyP"> ${contract.object}
+                                </span>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">PLAZO DE CONTRATO: </span> 
+                            
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">VALOR DEL CONTRATO: </span> 
+                                </div>
+                                <div class="col2">
+                                    (${contract.value})
+        
+                                </div>
                             </div>
-                            <div class="col2">
-                                ${contract.execution_time}
-    
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">PLAZO DE CONTRATO: </span> 
+                                </div>
+                                <div class="col2">
+                                    ${contract.execution_time}
+        
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">INTERVENTOR:  </span> 
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">INTERVENTOR:  </span> 
+                                </div>
+                                <div class="col2">
+                                    ${contract.supervisor}
+        
+                                </div>
                             </div>
-                            <div class="col2">
-                                ${contract.supervisor}
-    
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">FECHA DE INICIO:  </span>
+                                </div>
+                                <div class="col2">
+                                    ${contract.date}
+        
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">FECHA DE INICIO:  </span>
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">FECHA DE TERMINACIÓN:  </span>
+                                </div>
+                                <div class="col2">
+                                    ${contract.finish_date}
+        
+                                </div>
                             </div>
-                            <div class="col2">
-                                ${contract.date}
-    
-                            </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">FECHA DE TERMINACIÓN:  </span>
-                            </div>
-                            <div class="col2">
-                                ${contract.finish_date}
-    
-                            </div>
-                        </div>
-                        ${detalles}
+                            ${detalles}
                         </div>
                     `
                     );
@@ -401,64 +402,63 @@ module.exports =(data) =>{
                         detalles='';
                     }
                     return(
-                        `<div class="container-contract-info">
-                        <div class="fullWidthText">
-                            <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
-                            </span><br>
-                        </div>
-                        <div class="fullWidthText">
-                            <span class="boldP">OBJETO: </span>
-                            <span class="justifyP"> ${contract.object}
-                            </span>
-                        </div>
-                        
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">VALOR DEL CONTRATO: </span> 
+                        `<div class="containerInfo">
+                            <div class="fullWidthText">
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>
+                                </span>
                             </div>
-                            <div class="col2">
-                                (${contract.value})
+                            <div class="fullWidthText">
+                                <span class="boldP">OBJETO: </span>
+                                <span class="justifyP"> ${contract.object}
+                                </span>
+                            </div>
+                            
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">VALOR DEL CONTRATO: </span> 
+                                </div>
+                                <div class="col2">
+                                    (${contract.value})
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">PLAZO DE CONTRATO: </span> 
-                            </div>
-                            <div class="col2">
-                                ${contract.execution_time}
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">PLAZO DE CONTRATO: </span> 
+                                </div>
+                                <div class="col2">
+                                    ${contract.execution_time}
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">INTERVENTOR:  </span> 
-                            </div>
-                            <div class="col2">
-                                ${contract.supervisor}
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">INTERVENTOR:  </span> 
+                                </div>
+                                <div class="col2">
+                                    ${contract.supervisor}
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">FECHA DE INICIO:  </span>
-                            </div>
-                            <div class="col2">
-                                ${contract.date}
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">FECHA DE INICIO:  </span>
+                                </div>
+                                <div class="col2">
+                                    ${contract.date}
 
+                                </div>
                             </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="col1">
-                                <span class="boldP">FECHA DE TERMINACIÓN:  </span>
-                            </div>
-                            <div class="col2">
-                                ${contract.finish_date}
+                            <div class="fullWidthText">
+                                <div class="col1">
+                                    <span class="boldP">FECHA DE TERMINACIÓN:  </span>
+                                </div>
+                                <div class="col2">
+                                    ${contract.finish_date}
 
+                                </div>
                             </div>
-                        </div>
-                        ${detalles}
-                        
+                            ${detalles}
                         </div>
                     `
                     );
