@@ -317,12 +317,8 @@ module.exports =(data) =>{
                         `
                         <div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
-                                </span><br><span class="boldP">OBJETO: </span>
-                                <span class="justifyP"> ${contract.object}
-                                </span>
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>OBJETO: </span><span class="justifyP"> ${contract.object}</span>
                             </div>
-                            
                             <div class="fullWidthText">
                                 <div class="col1">
                                     <span class="boldP">VALOR DEL CONTRATO: </span> 
@@ -401,10 +397,7 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
-                                </span><br><span class="boldP">OBJETO: </span>
-                                <span class="justifyP"> ${contract.object}
-                                </span>
+                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}<br>OBJETO: </span><span class="justifyP"> ${contract.object}</span>
                             </div>
                             
                             <div class="fullWidthText">
