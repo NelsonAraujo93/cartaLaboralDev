@@ -122,7 +122,6 @@ module.exports =(data) =>{
         font-family:'Roboto';
         font-weight:bold;
         font-size:28px;
-        float:left;
         text-align:justify
     }
     .flexRow{
@@ -183,7 +182,6 @@ module.exports =(data) =>{
         display:inline-block;
         font-size: 28px;
         text-align:justify;
-        font-weight:bold
     }
     .containerInfo{
         margin-top: 30px;
@@ -452,7 +450,7 @@ module.exports =(data) =>{
                 });
             suscribio=`
                 <div class="fullWidthText">
-                    <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP"> , identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
+                    <div class="styleboldP"><span class="boldP">${user.name}, </span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification} expedida en Pamplona (N. de Santander), suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS:</span>
                     </div>
                 </div>
                 ${contractArraySuscribio}
