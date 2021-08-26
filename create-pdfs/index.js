@@ -140,9 +140,9 @@ module.exports =(data) =>{
     }
     .col2{
         width: 50%;
-        font-size:28px;
-        text-align:justify;
-        float:left;
+        font-size: 28px;
+        text-align: justify;
+        float: left;
     }
     .fullWidthText{
         margin-bottom:30px;
@@ -292,10 +292,10 @@ module.exports =(data) =>{
                     if(contract.details!==''){
                             detalles=`<div class="flexRow">
                             <div class="col1">
-                                DETALLES:  
+                                <span class="boldP">DETALLES:  </span>
                             </div>
                             <div class="col2">
-                                ${contract.details}
+                                <span class="justifyP">${contract.details}</span>
                             </div>
                         </div>`;
                     }else{
@@ -314,7 +314,7 @@ module.exports =(data) =>{
                         
                         <div class="flexRow">
                             <div class="col1">
-                                VALOR DEL CONTRATO:  
+                                <span class="boldP">VALOR DEL CONTRATO: </span> 
                             </div>
                             <div class="col2">
                                 (${contract.value})
@@ -323,7 +323,7 @@ module.exports =(data) =>{
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                PLAZO DE CONTRATO:  
+                                <span class="boldP">PLAZO DE CONTRATO: </span> 
                             </div>
                             <div class="col2">
                                 ${contract.execution_time}
@@ -332,7 +332,7 @@ module.exports =(data) =>{
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                INTERVENTOR:  
+                                <span class="boldP">INTERVENTOR:  </span> 
                             </div>
                             <div class="col2">
                                 ${contract.supervisor}
@@ -341,7 +341,7 @@ module.exports =(data) =>{
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                FECHA DE INICIO:  
+                                <span class="boldP">FECHA DE INICIO:  </span>
                             </div>
                             <div class="col2">
                                 ${contract.date}
@@ -350,7 +350,7 @@ module.exports =(data) =>{
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                FECHA DE TERMINACIÓN:  
+                                <span class="boldP">FECHA DE TERMINACIÓN:  </span>
                             </div>
                             <div class="col2">
                                 ${contract.finish_date}
@@ -375,12 +375,12 @@ module.exports =(data) =>{
                 contractArraySuscribio=contractArraySuscribio.map((contract,i)=>{
                     var detalles;
                     if(contract.details!==''){
-                            detalles=`<div class="flexRow">
+                        detalles=`<div class="flexRow">
                             <div class="col1">
-                                DETALLES:  
+                                <span class="boldP">DETALLES:  </span>
                             </div>
                             <div class="col2">
-                                ${contract.details}
+                                <span class="justifyP">${contract.details}</span>
                             </div>
                         </div>`;
                     }else{
@@ -399,47 +399,47 @@ module.exports =(data) =>{
                         
                         <div class="flexRow">
                             <div class="col1">
-                                VALOR DEL CONTRATO:  
+                                <span class="boldP">VALOR DEL CONTRATO: </span> 
                             </div>
                             <div class="col2">
                                 (${contract.value})
-    
+
                             </div>
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                PLAZO DE CONTRATO:  
+                                <span class="boldP">PLAZO DE CONTRATO: </span> 
                             </div>
                             <div class="col2">
                                 ${contract.execution_time}
-    
+
                             </div>
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                INTERVENTOR:  
+                                <span class="boldP">INTERVENTOR:  </span> 
                             </div>
                             <div class="col2">
                                 ${contract.supervisor}
-    
+
                             </div>
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                FECHA DE INICIO:  
+                                <span class="boldP">FECHA DE INICIO:  </span>
                             </div>
                             <div class="col2">
                                 ${contract.date}
-    
+
                             </div>
                         </div>
                         <div class="flexRow">
                             <div class="col1">
-                                FECHA DE TERMINACIÓN:  
+                                <span class="boldP">FECHA DE TERMINACIÓN:  </span>
                             </div>
                             <div class="col2">
                                 ${contract.finish_date}
-    
+
                             </div>
                         </div>
                         ${detalles}
