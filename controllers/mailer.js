@@ -21,8 +21,8 @@ module.exports = (formulario) => {
         const certificar = {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
-            subject: 'Estado de solicitud de certificado :Aprovado',
-            html: 'Gracias por usar la herramienta con nosotros <strong>'+ formulario.name +'</strong> Te informamos que tu petición ha sido certificada descargala adjunta a este correo <br><br><br><br>'+
+            subject: 'Estado de solicitud de certificado: Aprobado',
+            html: 'Gracias por usar la herramienta de solicitudes con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido certificada, descárguela adjunta a este correo <br><br><br><br>'+
             'Atentamente: <strong> Metrolinea </strong>',
             attachments: [{
                 filename: formulario.data,
@@ -44,7 +44,7 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Estado de solicitud de certificado :Rechazado',
-            html: 'Gracias por usar la herramienta con nosotros <strong>'+ formulario.name +'</strong>Te informamos que tu petición ha sido rechazada por la siguiente razón <strong>'+formulario.denied+'</strong><br><br><br><br>'+
+            html: 'Gracias por usar la herramienta con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido rechazada por la siguiente razón: <strong> '+formulario.denied+'</strong><br><br><br><br>'+
             'Atentamente: <strong>Metrolinea </strong>'
         }
         transporter.sendMail(denied, function (err, info) {
@@ -59,7 +59,7 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Gracias por usar la herramienta de certificados de metrolinea',
-            html: 'Hola <strong>'+ formulario.name +'</strong>Te informamos que tu petición ha sido enviada a nuestra aplicación si quieres conocer el estado de tu petición dale click a <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">este link</a><br><br><br><br>'+
+            html: 'Hola <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido enviada a nuestra aplicación si quieres conocer el estado de tu petición dale click a <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">este link</a><br><br><br><br>'+
             'Atentamente: <strong>Metrolinea </strong>'
         }
         transporter.sendMail(petition, function (err, info) {
