@@ -192,12 +192,14 @@ module.exports =(data) =>{
         text-align:justify;
     }
     .containerInfo{
-        margin-top: 30px;
         padding: 30px 0;
         width:100%;
         height:auto;
-        text-align:justify;
         box-sizing: border-box;
+    }
+    .emptyDetail{
+        height:40px;
+        width:100%;
     }
   </style>`;
     var observations=`<div class="fullWidthText">
