@@ -303,17 +303,16 @@ module.exports =(data) =>{
                     }
                     return(
                         `<div class="fullWidthText">
-                            <div class="contractTitle">
-                                <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
-                                </div>
-                            </div>
+                            <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
+                            </span>
                         </div>
                         <div class="fullWidthText">
-                            <div class="boldP">OBJETO: 
-                            </div>
-                            
-                            <div class="justifyP">${contract.object}
-                            </div>
+                            <span class="boldP">OBJETO: 
+                            </span>
+                        </div>
+                        <div class="fullWidthText">
+                            <span class="justifyP">${contract.object}
+                            </span>
                         </div>
                         
                         <div class="flexRow">
@@ -392,17 +391,16 @@ module.exports =(data) =>{
                     }
                     return(
                         `<div class="fullWidthText">
-                            <div class="contractTitle">
-                                <div class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
-                                </div>
-                            </div>
+                            <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}
+                            </span>
                         </div>
                         <div class="fullWidthText">
-                            <div class="boldP">OBJETO: 
-                            </div>
-                            
-                            <div class="justifyP">${contract.object}
-                            </div>
+                            <span class="boldP">OBJETO: 
+                            </span>
+                        </div>
+                        <div class="fullWidthText">
+                            <span class="justifyP">${contract.object}
+                            </span>
                         </div>
                         
                         <div class="flexRow">
