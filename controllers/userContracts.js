@@ -145,7 +145,7 @@ var controllerDB2 = {
             });
         }
         if (validate_id) {
-            dbConnection2.query("SELECT * FROM contracts WHERE contractor = ?", params.id,  async (err, result) => {
+            dbConnection2.query("SELECT contract_type.name as contract_name, supervisor.name as supervisor_name,contracts.* FROM contracts INNER JOIN supervisor ON supervisor.id=contracts.supervisor INNER JOIN contract_type ON contract_type.id=contracts.contractor_type WHERE contractor = ?", params.id,  async (err, result) => {
                 if (err) {
                     return res.status(404).send({
                         status: 'error',
@@ -241,7 +241,6 @@ var controllerDB2 = {
      */
      createContractor:  (req, res ) => {
         var params = req.body;
-        console.log(params)
         try {
             var validate_identification = !validator.isEmpty(toString(params.identification));
             var validate_name = !validator.isEmpty(params.name);

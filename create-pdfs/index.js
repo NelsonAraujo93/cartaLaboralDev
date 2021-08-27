@@ -192,7 +192,6 @@ module.exports =(data) =>{
         text-align:justify;
     }
     .containerInfo{
-        padding: 30px 0;
         width:100%;
         height:auto;
         box-sizing: border-box;
@@ -324,7 +323,7 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
+                                <span class="boldP"><br>Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
                             </div>
                             <div class="fullWidthText">
                             <br><span class="boldP">OBJETO: '</span><span class="justifyP">${contract.object}'</span>
@@ -405,7 +404,7 @@ module.exports =(data) =>{
                     return(
                         `<div class="containerInfo">
                             <div class="fullWidthText">
-                                <span class="boldP">Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
+                                <span class="boldP"><br>Contrato de Prestación de Servicios No. ${contract.contract_number} de ${contract.year}</span>
                             </div>
                             <div class="fullWidthText">
                                 <br><span class="boldP">OBJETO: '</span><span class="justifyP"> ${contract.object}'</span>
