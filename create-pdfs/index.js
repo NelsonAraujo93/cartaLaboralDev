@@ -308,6 +308,13 @@ module.exports =(data) =>{
             if(contractArrayEjecuta.length>=1){
                 contractArrayEjecuta=contractArrayEjecuta.map((contract,i)=>{
                     var detalles;
+                    var bDate,fDate;
+                    bDate= new Date(contract.date);
+                    fDate= new Date(contract.finish_date);
+                    bDate = bDate.getDate() + "-" + (bDate.getMonth() +1) + "-" + bDate.getFullYear();
+                    fDate = fDate.getDate() + "-" + (fDate.getMonth() +1) + "-" + fDate.getFullYear();
+                    contractArrayEjecuta[i].fDate=fDate;
+                    contractArrayEjecuta[i].bDate=bDate;
                     if(contract.details!==''){
                         detalles=`<div class="fullWidthText">
                             <div class="col1">
@@ -361,7 +368,7 @@ module.exports =(data) =>{
                                     <span class="boldP">FECHA DE INICIO:  </span>
                                 </div>
                                 <div class="col2">
-                                    ${contract.date}
+                                    ${contract.bDate}
 
                                 </div>
                             </div>
@@ -370,7 +377,7 @@ module.exports =(data) =>{
                                     <span class="boldP">FECHA DE TERMINACIÓN:  </span>
                                 </div>
                                 <div class="col2">
-                                    ${contract.finish_date}
+                                    ${contract.fDate}
                                 </div>
                             </div>
                             ${detalles}
@@ -388,6 +395,13 @@ module.exports =(data) =>{
             if(contractArraySuscribio.length>=1){
     
                 contractArraySuscribio=contractArraySuscribio.map((contract,i)=>{
+                    var bDate,fDate;
+                    bDate= new Date(contract.date);
+                    fDate= new Date(contract.finish_date);
+                    bDate = bDate.getDate() + "-" + (bDate.getMonth() +1) + "-" + bDate.getFullYear();
+                    fDate = fDate.getDate() + "-" + (fDate.getMonth() +1) + "-" + fDate.getFullYear();
+                    contractArraySuscribio[i].fDate=fDate;
+                    contractArraySuscribio[i].bDate=bDate;
                     var detalles;
                     if(contract.details!==''){
                         detalles=`<div class="fullWidthText">
@@ -440,7 +454,7 @@ module.exports =(data) =>{
                                     <span class="boldP">FECHA DE INICIO:  </span>
                                 </div>
                                 <div class="col2">
-                                    ${contract.date}
+                                    ${contract.bDate}
                                 </div>
                             </div>
                             <div class="fullWidthText">
@@ -448,7 +462,7 @@ module.exports =(data) =>{
                                     <span class="boldP">FECHA DE TERMINACIÓN:  </span>
                                 </div>
                                 <div class="col2">
-                                    ${contract.finish_date}
+                                    ${contract.fDate}
                                 </div>
                             </div>
                             ${detalles}
