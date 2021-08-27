@@ -334,7 +334,7 @@ module.exports =(data) =>{
                                     <span class="boldP">VALOR DEL CONTRATO: </span> 
                                 </div>
                                 <div class="col2">
-                                    $(${contract.value})
+                                    <div class="justifyP">${contract.value_string} $(${contract.value})</div>
 
                                 </div>
                             </div>
@@ -415,7 +415,7 @@ module.exports =(data) =>{
                                     <span class="boldP">VALOR DEL CONTRATO: </span> 
                                 </div>
                                 <div class="col2">
-                                    $(${contract.value})
+                                    <div class="justifyP">${contract.value_string} $(${contract.value})</div>
                                 </div>
                             </div>
                             <div class="fullWidthText">
