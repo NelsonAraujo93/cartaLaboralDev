@@ -11,13 +11,12 @@ module.exports = (formulario) => {
             type: "OAuth2",
             user: 'estudiovagos@gmail.com', // Cambialo por tu email
             pass: 'vagosstudios2021', // Cambialo por tu password
-            clientId:'225067350835-15cupt48d2hprvtr1bt1q8r4ts690047.apps.googleusercontent.com',
-            clientSecret: 'O89gNnfl7yKNK4ApwlPoz5L7',
-            refreshToken: '1//04iSh1-kIFI97CgYIARAAGAQSNwF-L9IrfZOXrs7GKJT0doZt2ZwIYyoU_DBD9uVuymO-U1XF9PoEXhSf2krTRKuS8sefWSEUldQ',
+            clientId:'225067350835-nsvv75hr0tlh3hcsghs5pi5gtj9fr64e.apps.googleusercontent.com',
+            clientSecret: 'ubvy3hLq_mN0U62m5eF7TUfJ',
+            refreshToken: '1//04mdUGdOSnNQPCgYIARAAGAQSNwF-L9IrBiQ3Z3DwdHNontra8DN5GSFLRT-6WtZAnm_ndlTCk2gGmrFdgAtTDUOVGLI8PnDPqX0',
         }
     });
     if(formulario.mailState===1){
-        console.log(formulario);
         const certificar = {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
