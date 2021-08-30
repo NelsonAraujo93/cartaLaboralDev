@@ -240,7 +240,7 @@ module.exports =(data,logoRaw,logoRaw2) =>{
     var ejecuta=` `;
     var suscribio=` `;
     if(data.pdfInfo.data===1){
-        observations=data.observations!==''? observations :'';
+        observations=user.observations!==''? observations :'';
 
         return `
         <!doctype html>
