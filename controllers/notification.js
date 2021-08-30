@@ -12,6 +12,7 @@ const fetch = require('node-fetch');
 //const Blob = require('fetch-blob');
 const pdf = require('html-pdf');
 const pdfTemplate = require('../create-pdfs');
+const imageToBase64 = require('image-to-base64');
 //const configMensaje = require('../controllers/configMensajes');
 
 //const tournamentMensaje = require('./tournamentMensaje');
@@ -252,6 +253,7 @@ var controller = {
      */
      login:  async (req, res) => {
         var params = req.body;
+        console.log(params)
         try {
             var validate_name = !validator.isEmpty(params.name);
             var validate_pass = !validator.isEmpty(params.pass);
@@ -394,31 +396,41 @@ var controller = {
         //idDel FOrm
         //PDFINFO
         //pdfName
-        pdf.create(pdfTemplate(req.body),
-            {
-                "format": "A4",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
-                "orientation": "portrait",
-                 // portrait or landscape
-                base: 'file:///' + __dirname + '/images/',
-                "zoomFactor": "1", 
-                "type": "pdf",
-                "quality": "75", 
-                "header": {
-                    "height": "45mm",
-                },
-                "footer": {
-                    "height": "28mm"
-            }}).toFile('./stamp/'+req.body.pdfName,(err)=>{
-            if(err){
-                return Promise.reject();
-            }else{
-                return res.status(200).send({
-                    status: 'Ok',
-                    message: 'Formilarios cargados'
-                });
-            }
+        var logo = '';
+        var firma='';
+        imageToBase64("./images/logo.JPG").then((response)=>{
+            logo=response;
+            imageToBase64("./images/firma.JPG").then((response)=>{
+                firma=response;
+                pdf.create(pdfTemplate(req.body, logo,firma),
+                {
+                    "format": "A4",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
+                    "orientation": "portrait",
+                    // portrait or landscape
+                    base: 'file:///' + __dirname + '/images/',
+                    "zoomFactor": "1", 
+                    "type": "pdf",
+                    "quality": "75", 
+                    "header": {
+                        "height": "45mm",
+                    },
+                    "footer": {
+                        "height": "28mm"
+                }}).toFile('./stamp/'+req.body.pdfName,(err)=>{
+                if(err){
+                    return Promise.reject();
+                }else{
+                    return res.status(200).send({
+                        status: 'Ok',
+                        message: 'Formilarios cargados'
+                    });
+                }
 
+            })
+            })
+            
         })
+       
     },
     /*getPdf:(req,res)=>{
         pdf.create(pdfTemplate(req.data),{}).toFile('result.pdf',(err)=>{

@@ -1,20 +1,30 @@
-module.exports =(data) =>{
+
+module.exports =(data,logoRaw,logoRaw2) =>{
     var user=data.pdfInfo.user;
+    var qr= data.qr;
+    var logo= 'data:image/JPG;base64,'+logoRaw;
+    var logoFirma= 'data:image/JPG;base64,'+logoRaw2;
     var style= `<style>
               
     .image-container{
-        height: 38px;
+        height: 42px;
+        width: 300px;
+        position: relative;
+     }
+     .image-container3{
+        height: 200px;
         width: 200px;
         position: relative;
-        overflow: hidden;
      }
      .image {
-        width: 210px;
+        width: 300px;
         height: 42px;
-        position: absolute;
-        left: -2px;
-        top: -2px;
-        background: url(https://upload.wikimedia.org/wikipedia/commons/8/8c/Metrol%C3%ADnea_logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .image-firma {
+        width: 200px;
+        height: 200px;
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -31,7 +41,7 @@ module.exports =(data) =>{
         margin: 0;
     }
     .header{
-        height: 120px;
+        height: 160px;
         border-bottom: 2px solid yellow;
         width: calc(100% - 50px);
         position:absolute;
@@ -200,6 +210,23 @@ module.exports =(data) =>{
         height:40px;
         width:100%;
     }
+    .qrContainer:{
+        position: relative;
+        height:200px;
+        width:100%
+    }
+    .image-container2{
+        width:100%;
+        max-width:120px;
+        margin: 0 auto;
+        height:120px;
+        position: relative;
+    }
+    .metrolineaQR:{
+        width:120px;
+        height:120px;
+        background-size:100%;
+    }
   </style>`;
     var observations=`<div class="fullWidthText">
                         <div class="boldC">
@@ -208,17 +235,10 @@ module.exports =(data) =>{
                         <div class="justifyP">
                             ${user.observations}
                                     </div>
-                        </div>
-                        <div class="fullWidthText">
-                            <div class="justifyP">
-                            Cordialmente,
-
-                            </div>
-                        </div> `;
+                        </div>`;
     
     var ejecuta=` `;
     var suscribio=` `;
-    
     if(data.pdfInfo.data===1){
         observations=data.observations!==''? observations :'';
 
@@ -234,7 +254,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image">
+                            <img class="image" src=${logo}>
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
@@ -279,6 +299,28 @@ module.exports =(data) =>{
                         </div>
                     </div>
                     ${observations}
+                    
+                    <div class="fullWidthText">
+                        <div class="justifyP">
+                        Cordialmente,
+
+                        </div>
+                    </div>
+                    <div class="image-container3">
+                        <img class="image-firma" src=${logoFirma}>
+                    </div>
+                    <div class="fullWidthText">
+                        <div><span class="boldP">LUZ MARINA PEÑA QUINTAN </span><br><span class="boldP">PUI Talento Humano</span>
+                        </div>
+                    </div> 
+                    <div class="qrContainer">
+                        <div class="mainTitle">
+                            <div class="title">QR DEL CERTIFICADO:</div>
+                        </div>
+                        <div class="image-container2">
+                            <img class="metrolineaQr" src=${data.qr}>
+                        </div>
+                    </div>
                 </div>
                 <footer id="pageFooter" class="footer" style="zoom: 0.45;">
                     <div class="footerContent">
@@ -494,7 +536,7 @@ module.exports =(data) =>{
                 <header id="pageHeader" class="header" style="zoom: 0.45;">
                     <div class="left">
                         <div class="image-container">
-                            <img class="image">
+                            <img class="image" src=${logo}>
                         </div>
                         <div class="text1">Nit.830.507.387-3</div>
                     </div>
@@ -514,8 +556,30 @@ module.exports =(data) =>{
                             S. A. hace constar que:
                         </div>
                     </div>
-                   ${ejecuta}
-                   ${suscribio}
+                    ${ejecuta}
+                    ${suscribio}
+                    <div class="fullWidthText">
+                        <div class="justifyP">
+                        Cordialmente,
+
+                        </div>
+                    </div>
+                    <div class="image-container3">
+                        <img class="image-firma" src=${logoFirma}>
+                    </div>
+                    <div class="fullWidthText">
+                        <div><span class="boldP">LUZ MARINA PEÑA QUINTAN </span><br><span class="boldP">PUI Talento Humano</span>
+                        </div>
+                    </div> 
+                    <div class="qrContainer">
+                        <div class="mainTitle">
+                            <div class="title">QR DEL CERTIFICADO:</div>
+                        </div>
+                        
+                        <div class="image-container2">
+                            <img class="metrolineaQr" src=${data.qr}>
+                        </div>
+                    </div>
                 </div>
                 <footer id="pageFooter" class="footer" style="zoom: 0.45;">
                     <div class="footerContent">
@@ -538,4 +602,5 @@ module.exports =(data) =>{
         </html>
         `;
     }
+    
 }
