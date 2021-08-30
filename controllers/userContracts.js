@@ -71,7 +71,7 @@ var controllerDB2 = {
             });
         }
         if (validate_id) {
-            dbConnection2.query("SELECT job_title.name ,payroll.* FROM payroll INNER JOIN job_title ON job_title.id = payroll.job_title WHERE identification = ?", params.id,  async (err, result) => {
+            dbConnection2.query("SELECT job_title.name as job_name ,payroll.* FROM payroll INNER JOIN job_title ON job_title.id = payroll.job_title WHERE identification = ?", params.id,  async (err, result) => {
                 if (result.length === 0) {
                     return res.status(404).send({
                         status: 'error',
