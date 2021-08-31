@@ -21,8 +21,8 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Estado de solicitud de certificado: Aprobado',
-            html: 'Gracias por usar la herramienta de solicitudes con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido certificada, descárguela adjunta a este correo <br><br><br><br>'+
-            'Atentamente: <strong> Metrolinea </strong>',
+            html: 'Gracias por usar la herramienta de solicitudes con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido certificada, descárguela adjunta a este correo o a través de  <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">nuestra herramienta</a> <br><br><br><br>'+
+            'Atentamente: <strong> Metrolinea</strong>.',
             attachments: [{
                 filename: formulario.data,
                 path:  './stamp/' + formulario.data,
@@ -42,9 +42,9 @@ module.exports = (formulario) => {
         const denied = {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
-            subject: 'Estado de solicitud de certificado :Rechazado',
-            html: 'Gracias por usar la herramienta con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido rechazada por la siguiente razón: <strong> '+formulario.denied+'</strong><br><br><br><br>'+
-            'Atentamente: <strong>Metrolinea </strong>'
+            subject: 'Estado de solicitud de certificado: Rechazado',
+            html: 'Gracias por usar la herramienta de solicitudes con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido rechazada por la siguiente razón: <strong> '+formulario.denied+'</strong>.<br><br><br><br>'+
+            'Atentamente: <strong>Metrolinea</strong>.'
         }
         transporter.sendMail(denied, function (err, info) {
             if (err){
@@ -58,8 +58,8 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Gracias por usar la herramienta de certificados de metrolinea',
-            html: 'Hola <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido enviada a nuestra aplicación si quieres conocer el estado de tu petición dale click a <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">este link</a><br><br><br><br>'+
-            'Atentamente: <strong>Metrolinea </strong>'
+            html: 'Hola <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido enviada a nuestra aplicación, si quiere conocer el estado de su petición dar click a <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">el siguiente link</a><br><br><br><br>'+
+            'Atentamente: <strong>Metrolinea</strong>.'
         }
         transporter.sendMail(petition, function (err, info) {
             if (err){
