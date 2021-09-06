@@ -11,9 +11,9 @@ module.exports = (formulario) => {
             type: "OAuth2",
             user: 'estudiovagos@gmail.com', // Cambialo por tu email
             pass: 'vagosstudios2021', // Cambialo por tu password
-            clientId:'225067350835-nsvv75hr0tlh3hcsghs5pi5gtj9fr64e.apps.googleusercontent.com',
-            clientSecret: 'ubvy3hLq_mN0U62m5eF7TUfJ',
-            refreshToken: '1//04mdUGdOSnNQPCgYIARAAGAQSNwF-L9IrBiQ3Z3DwdHNontra8DN5GSFLRT-6WtZAnm_ndlTCk2gGmrFdgAtTDUOVGLI8PnDPqX0',
+            clientId:'225067350835-7mfo5ot4ef0btuson0j7omd2v7uousvg.apps.googleusercontent.com',
+            clientSecret: 'dIHdzn0azeAYKe3b3Ij9I9k5',
+            refreshToken: '1//04V5FWYeZW03cCgYIARAAGAQSNwF-L9Ir9E1w5VaIqYOMhmtNfghj8c2qikcy2eTvGGtIjuU3Lub5kliuiRp_b80awE0iQlV3VQA',
         }
     });
     if(formulario.mailState===1){
