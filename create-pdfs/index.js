@@ -134,6 +134,14 @@ module.exports =(data,logoRaw,logoRaw2) =>{
         font-size:28px;
         text-align:justify
     }
+    .boldD{
+        display:inline-block;
+        font-family:'Roboto';
+        font-weight:bold;
+        font-size:28px;
+        text-align:justify;
+        text-transform:uppercase;
+    }
     .flexRow{
         width:100%;
         font-size:22px;
@@ -428,7 +436,7 @@ module.exports =(data,logoRaw,logoRaw2) =>{
                 
             ejecuta=`
                     <div class="fullWidthText2">
-                        <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification}, ejecuta con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS PROFESIONALES:</span>
+                        <div class="styleboldP"><span class="boldP">${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification}, <span class="boldD">ejecuta</span> con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS PROFESIONALES:</span>
                         </div>
                     </div>
                     ${contractArrayEjecuta}
@@ -512,7 +520,7 @@ module.exports =(data,logoRaw,logoRaw2) =>{
                 });
             suscribio=`
                 <div class="fullWidthText2">
-                    <div class="styleboldP"><span class="boldP"><br>${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification}, suscribió con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS PROFESIONALES:</span>
+                    <div class="styleboldP"><span class="boldP"><br>${user.name}</span><span class="justifyP">, identificado con la cédula de ciudadanía No. ${user.identification}, <span class="boldD">suscribió</span> con Metrolínea S.A., el(los) siguiente(s) CONTRATO(S) DE PRESTACION DE SERVICIOS PROFESIONALES:</span>
                     </div>
                 </div>
                 ${contractArraySuscribio}
