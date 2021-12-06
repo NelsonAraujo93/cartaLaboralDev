@@ -21,7 +21,7 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Estado de solicitud de certificado: Aprobado',
-            html: 'Gracias por usar la herramienta de solicitudes con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido certificada, descárguela adjunta a este correo o a través de  <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">nuestra herramienta</a> <br><br><br><br>'+
+            html: 'Gracias por usar la herramienta de solicitudes con nosotros <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido certificada, descárguela adjunta a este correo o a través de  <a href="http://172.16.40.5:3900/new-details/'+formulario.id+'">nuestra herramienta</a> <br><br><br><br>'+
             'Atentamente: <strong> Metrolinea</strong>.',
             attachments: [{
                 filename: formulario.data,
@@ -58,7 +58,7 @@ module.exports = (formulario) => {
             from: 'Metrolinea' + '<estudiovagos@gmail.com>',
             to: formulario.email, // Cambia esta parte por el destinatario
             subject: 'Gracias por usar la herramienta de certificados de metrolinea',
-            html: 'Hola <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido enviada a nuestra aplicación, si quiere conocer el estado de su petición dar click a <a href="http://104.248.54.46:3900/new-details/'+formulario.id+'">el siguiente link</a><br><br><br><br>'+
+            html: 'Hola <strong>'+ formulario.name +'</strong>. Le informamos que su petición ha sido enviada a nuestra aplicación, si quiere conocer el estado de su petición dar click a <a href="http://172.16.40.5:3900/new-details/'+formulario.id+'">el siguiente link</a><br><br><br><br>'+
             'Atentamente: <strong>Metrolinea</strong>.'
         }
         transporter.sendMail(petition, function (err, info) {
