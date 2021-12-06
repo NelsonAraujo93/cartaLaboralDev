@@ -253,6 +253,7 @@ var controller = {
      */
      login:  async (req, res) => {
         var params = req.body;
+        console.log(params)
         try {
             var validate_name = !validator.isEmpty(params.name);
             var validate_pass = !validator.isEmpty(params.pass);
