@@ -415,7 +415,7 @@ var controller = {
                     "header": {
                         "height": "45mm",
                     },
-                    "phantomPath":phantomJs.path,
+                    "phantomPath": "./node_modules/phantomjs/bin/phantomjs",
                     "footer": {
                         "height": "28mm",
                 }}).toFile('./stamp/'+req.body.pdfName,(err)=>{
