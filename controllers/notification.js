@@ -400,7 +400,10 @@ var controller = {
         var firma='';
         imageToBase64("./images/logo.JPG").then((response)=>{
             logo=response;
+            console.log('1');
             imageToBase64("./images/firma.JPG").then((response)=>{
+                
+            console.log('2');
                 firma=response;
                 pdf.create(pdfTemplate(req.body, logo,firma),
                 {
@@ -414,11 +417,12 @@ var controller = {
                     "header": {
                         "height": "45mm",
                     },
-                    "phantomPath": "./node_modules/phantomjs/bin/phantomjs",
                     "footer": {
                         "height": "28mm",
                 }}).toFile('./stamp/'+req.body.pdfName,(err)=>{
                 if(err){
+                    
+                    console.log(err);
                     return Promise.reject();
                 }else{
                     return res.status(200).send({
