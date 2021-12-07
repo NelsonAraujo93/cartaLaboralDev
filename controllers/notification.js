@@ -415,7 +415,7 @@ var controller = {
                     "zoomFactor": "1", 
                     "type": "pdf",
                     "quality": "75",
-                    phantomPath: __dirname + '/node_modules/phantomjs-prebuilt/bin/pjantomjs', 
+                    phantomPath: './node_modules/phantomjs-prebuilt/bin/pjantomjs', 
                     "header": {
                         "height": "45mm",
                     },
