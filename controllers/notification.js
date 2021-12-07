@@ -13,7 +13,6 @@ const fetch = require('node-fetch');
 const pdf = require('html-pdf');
 const pdfTemplate = require('../create-pdfs');
 const imageToBase64 = require('image-to-base64');
-var phantomJs= require('phantomjs-prebuilt');
 //const configMensaje = require('../controllers/configMensajes');
 
 //const tournamentMensaje = require('./tournamentMensaje');
