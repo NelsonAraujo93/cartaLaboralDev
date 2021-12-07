@@ -412,7 +412,8 @@ var controller = {
                     base: 'file:///' + __dirname + '/images/',
                     "zoomFactor": "1", 
                     "type": "pdf",
-                    "quality": "75", 
+                    "quality": "75",
+                    phantomPath:'./node_modules/phantomjs-prebuilt/bin/pjantomjs', 
                     "header": {
                         "height": "45mm",
                     },
