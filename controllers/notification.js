@@ -254,7 +254,6 @@ var controller = {
      */
      login:  async (req, res) => {
         var params = req.body;
-        console.log(params)
         try {
             var validate_name = !validator.isEmpty(params.name);
             var validate_pass = !validator.isEmpty(params.pass);
@@ -449,6 +448,7 @@ var controller = {
      */
      addStamp: (req, res) => {
         var params = req.body;
+        console.log(params);
         try {
             var validate_id = !validator.isEmpty(toString(params.id));
             var validate_pdf_string = !validator.isEmpty(toString(params.pdf_string));
@@ -730,10 +730,10 @@ var controller = {
        }
        var file_path = req.files.file.path;
        //en servidor
-       var file_name = file_path.split('/')[1];
-       var file_ext = file_name.split('.')[1];
-       //var file_name = file_path.split('\\')[1];
-       //var file_ext = file_name.split('\.')[1];
+       //var file_name = file_path.split('/')[1];
+       //var file_ext = file_name.split('.')[1];
+       var file_name = file_path.split('\\')[1];
+       var file_ext = file_name.split('\.')[1];
        if(file_ext !='pdf'){
         fs.unlink(file_path,(err)=>{
             return res.status(200).send({
@@ -793,7 +793,6 @@ var controller = {
       downloadPrevStamp : (req , res) =>{
         var params = req.body;
         var url = params.pdf_string;
-        console.log(req.body)
         var path_file = './stamp/' + url;
         fs.exists(path_file, (exists)=>{
             if(exists){
@@ -801,7 +800,6 @@ var controller = {
                     try {
                         var filestream = fs.createReadStream(path_file);
                         res.contentType("application/pdf");
-
                         // When the stream is done being read, end the response
                         filestream.on('close', () => {
                             res.end()
