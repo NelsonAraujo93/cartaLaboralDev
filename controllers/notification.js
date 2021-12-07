@@ -13,6 +13,8 @@ const fetch = require('node-fetch');
 const pdf = require('html-pdf');
 const pdfTemplate = require('../create-pdfs');
 const imageToBase64 = require('image-to-base64');
+var phantomjs = require('phantomjs-prebuilt')
+var binPath = phantomjs.path
 //const configMensaje = require('../controllers/configMensajes');
 
 //const tournamentMensaje = require('./tournamentMensaje');
@@ -413,7 +415,7 @@ var controller = {
                     "zoomFactor": "1", 
                     "type": "pdf",
                     "quality": "75",
-                    phantomPath:'./node_modules/phantomjs-prebuilt/bin/pjantomjs', 
+                    phantomPath: __dirname + '/node_modules/phantomjs-prebuilt/bin/pjantomjs', 
                     "header": {
                         "height": "45mm",
                     },
