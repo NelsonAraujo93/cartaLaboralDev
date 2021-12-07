@@ -413,7 +413,6 @@ var controller = {
                     "zoomFactor": "1", 
                     "type": "pdf",
                     "quality": "75",
-                    phantomPath: './node_modules/phantomjs-prebuilt/bin/phantomjs', 
                     "header": {
                         "height": "45mm",
                     },
