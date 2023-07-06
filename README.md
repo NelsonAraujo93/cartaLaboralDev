@@ -14,7 +14,7 @@
   - [❓ FAQ ](#-faq-)
   - [📝 License ](#-license-)
 
-# 📖 Budget App <a name="about-project"></a>
+# 📖 Carta Laboral <a name="carta-laboral"></a>
 
 **Cata Laboral** This is a MERN project that allows the user to request for a Laboral Letter and send the letter to the user mail.
 ## 🛠 Built With <a name="built-with"></a>
